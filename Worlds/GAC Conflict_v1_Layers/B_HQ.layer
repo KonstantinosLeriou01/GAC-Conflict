@@ -15,9 +15,6 @@ $grp GenericEntity : "{1391CE8C0E255636}Prefabs/Systems/MilitaryBase/ConflictMil
     }
     m_bIsSource 1
    }
-   SCR_FactionAffiliationComponent "{5AFC974A2595F05D}" {
-    "faction affiliation" "US"
-   }
   }
   coords 3715.62 280 430.077
   angleY 92.898

@@ -76,15 +76,30 @@ $grp GenericEntity : "{1391CE8C0E255636}Prefabs/Systems/MilitaryBase/ConflictMil
   angleY 63.444
  }
 }
-GenericEntity : "{522DCD528AE27052}Prefabs/Systems/MilitaryBase/ConflictRelayRadio.et" {
- components {
-  SCR_CoverageRadioComponent "{5C727AD73024FB2A}" {
-   Transceivers {
-    RelayTransceiver "{5C727AD73024FB39}" {
-     "Transmitting Range" 1300
+$grp GenericEntity : "{522DCD528AE27052}Prefabs/Systems/MilitaryBase/ConflictRelayRadio.et" {
+ {
+  components {
+   SCR_CoverageRadioComponent "{5C727AD73024FB2A}" {
+    Transceivers {
+     RelayTransceiver "{5C727AD73024FB39}" {
+      "Transmitting Range" 1300
+     }
     }
    }
   }
+  coords 1565.211 359.259 1605.777
  }
- coords 1565.211 359.259 1605.777
+ {
+  components {
+   SCR_CoverageRadioComponent "{5C727AD73024FB2A}" {
+    Transceivers {
+     RelayTransceiver "{5C727AD73024FB39}" {
+      "Transmitting Range" 1200
+     }
+    }
+   }
+  }
+  coords 1762.346 282.9 2825.207
+  angleY -43.045
+ }
 }

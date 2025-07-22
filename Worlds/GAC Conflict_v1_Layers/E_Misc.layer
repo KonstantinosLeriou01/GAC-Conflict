@@ -6,3 +6,11 @@ StaticModelEntity : "{1BB9E9ECC5AD0E88}PrefabsEditable/Auto/Structures/Infrastru
  }
  coords 1761.381 245.443 2826.375
 }
+$grp SCR_DestructibleBuildingEntity : "{1E934D500642450B}Prefabs/Structures/Wall/CNCBlock.et" {
+ {
+  coords 3781.311 -0.139 878.874
+ }
+ {
+  coords 3773.39 0.232 879.311
+ }
+}

@@ -46,6 +46,10 @@ SCR_GameModeCampaign GameMode_Campaign : "{3B230AAC5252108F}Prefabs/MP/Modes/Con
   }
  }
  coords 1843.281 233.951 1495.201
+ m_iControlPointsThreshold 3
+ m_fVictoryTimer 900
+ m_iRegularSuppliesIncomeExtra 0
+ m_iHQStartingSupplies 3000
 }
 ScriptedChatEntity : "{536D80EB494DDC43}Prefabs/MP/Campaign/CampaignMPChatEntity.et" {
  coords 1298.082 347.416 1768.087

@@ -1,0 +1,8 @@
+StaticModelEntity : "{1BB9E9ECC5AD0E88}PrefabsEditable/Auto/Structures/Infrastructure/Towers/E_TransmitterTower_01.et" {
+ components {
+  SCR_DestructibleBuildingComponent "{5DA867E872E096D8}" {
+   Enabled 0
+  }
+ }
+ coords 1761.381 245.443 2826.375
+}

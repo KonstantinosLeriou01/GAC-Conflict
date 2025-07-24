@@ -1,0 +1,9 @@
+GenericEntity : "{54986385A6AF77B2}Prefabs/Props/Military/Arsenal/ArsenalBoxes/ArsenalBox_Base.et" {
+ components {
+  SCR_FactionAffiliationComponent "{5A50E7655452A21D}" {
+   "faction affiliation" "USSR"
+  }
+ }
+ coords 3745.352 280 421.124
+ angleY 85.323
+}

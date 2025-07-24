@@ -2,6 +2,7 @@ $grp GenericEntity : "{1391CE8C0E255636}Prefabs/Systems/MilitaryBase/ConflictMil
  Chichal {
   components {
    SCR_CampaignMilitaryBaseComponent "{5AFC974A70234D1C}" {
+    m_iRadius 60
     m_bDisableWhenUnusedAsHQ 0
     m_sBaseName "Chichal"
     m_aWhiteList {
@@ -19,9 +20,30 @@ $grp GenericEntity : "{1391CE8C0E255636}Prefabs/Systems/MilitaryBase/ConflictMil
      }
     }
    }
+   SCR_FactionAffiliationComponent "{5AFC974A2595F05D}" {
+    "faction affiliation" "MEI"
+   }
   }
   coords 2878.877 383.566 705.943
   angleY -135.626
+  {
+   GenericEntity {
+    ID "5CCED514A5908822"
+    components {
+     SCR_AmbientPatrolSpawnPointComponent "{5CCEC6036BBF3EDD}" {
+      m_bPickRandomGroupType 1
+     }
+    }
+   }
+   GenericEntity {
+    ID "606078EE23DE48AC"
+    components {
+     SCR_AmbientPatrolSpawnPointComponent "{5CCEC6036BBF3EDD}" {
+      m_bPickRandomGroupType 1
+     }
+    }
+   }
+  }
  }
  Tor_Kelay {
   components {
@@ -42,6 +64,9 @@ $grp GenericEntity : "{1391CE8C0E255636}Prefabs/Systems/MilitaryBase/ConflictMil
       "Transmitting Range" 1000
      }
     }
+   }
+   SCR_FactionAffiliationComponent "{5AFC974A2595F05D}" {
+    "faction affiliation" "MEI"
    }
   }
   coords 2879.41 24.765 2351.925
@@ -66,6 +91,9 @@ $grp GenericEntity : "{1391CE8C0E255636}Prefabs/Systems/MilitaryBase/ConflictMil
       "Transmitting Range" 900
      }
     }
+   }
+   SCR_FactionAffiliationComponent "{5AFC974A2595F05D}" {
+    "faction affiliation" "MEI"
    }
   }
   coords 1029.022 290.145 1811.861
@@ -92,6 +120,9 @@ $grp GenericEntity : "{1391CE8C0E255636}Prefabs/Systems/MilitaryBase/ConflictMil
      }
     }
    }
+   SCR_FactionAffiliationComponent "{5AFC974A2595F05D}" {
+    "faction affiliation" "MEI"
+   }
   }
   coords 750.354 35.606 3279.141
   angleY 63.444
@@ -113,6 +144,9 @@ $grp GenericEntity : "{522DCD528AE27052}Prefabs/Systems/MilitaryBase/ConflictRel
      }
     }
    }
+   SCR_FactionAffiliationComponent "{5C727AD73024FB13}" {
+    "faction affiliation" "MEI"
+   }
   }
   coords 1565.211 359.259 1605.777
  }
@@ -130,6 +164,9 @@ $grp GenericEntity : "{522DCD528AE27052}Prefabs/Systems/MilitaryBase/ConflictRel
       "Transmitting Range" 1150
      }
     }
+   }
+   SCR_FactionAffiliationComponent "{5C727AD73024FB13}" {
+    "faction affiliation" "MEI"
    }
   }
   coords 1754.679 255.178 2832.643

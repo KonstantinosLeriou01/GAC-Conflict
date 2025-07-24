@@ -1,16 +1,21 @@
 $grp GenericEntity : "{1391CE8C0E255636}Prefabs/Systems/MilitaryBase/ConflictMilitaryBase.et" {
- {
+ Chichal {
   components {
    SCR_CampaignMilitaryBaseComponent "{5AFC974A70234D1C}" {
     m_bDisableWhenUnusedAsHQ 0
+    m_sBaseName "Chichal"
+    m_aWhiteList {
+     "Kandlay" "South Relay St."
+    }
    }
    SCR_CampaignSeizingComponent "{5C66967235FBEEA3}" {
     m_fMaximumSeizingTime 6
+    m_fMinimumSeizingTime 4
    }
    SCR_CoverageRadioComponent "{5C669673C2A82A2B}" {
     Transceivers {
      RelayTransceiver "{5C669673E8C94083}" {
-      "Transmitting Range" 1200
+      "Transmitting Range" 1600
      }
     }
    }
@@ -18,18 +23,23 @@ $grp GenericEntity : "{1391CE8C0E255636}Prefabs/Systems/MilitaryBase/ConflictMil
   coords 2878.877 383.566 705.943
   angleY -135.626
  }
- {
+ Tor_Kelay {
   components {
    SCR_CampaignMilitaryBaseComponent "{5AFC974A70234D1C}" {
     m_bDisableWhenUnusedAsHQ 0
+    m_sBaseName "Tor Kelay"
+    m_aWhiteList {
+     "Kandlay" "Airfield"
+    }
    }
    SCR_CampaignSeizingComponent "{5C66967235FBEEA3}" {
     m_fMaximumSeizingTime 6
+    m_fMinimumSeizingTime 4
    }
    SCR_CoverageRadioComponent "{5C669673C2A82A2B}" {
     Transceivers {
      RelayTransceiver "{5C669673E8C94083}" {
-      "Transmitting Range" 1200
+      "Transmitting Range" 1000
      }
     }
    }
@@ -37,18 +47,23 @@ $grp GenericEntity : "{1391CE8C0E255636}Prefabs/Systems/MilitaryBase/ConflictMil
   coords 2879.41 24.765 2351.925
   angleY -93.714
  }
- {
+ COP_Phoenix {
   components {
    SCR_CampaignMilitaryBaseComponent "{5AFC974A70234D1C}" {
     m_bDisableWhenUnusedAsHQ 0
+    m_sBaseName "COP Phoenix"
+    m_aWhiteList {
+     "Tangalai" "South Relay St." "Ashat"
+    }
    }
    SCR_CampaignSeizingComponent "{5C66967235FBEEA3}" {
     m_fMaximumSeizingTime 6
+    m_fMinimumSeizingTime 4
    }
    SCR_CoverageRadioComponent "{5C669673C2A82A2B}" {
     Transceivers {
      RelayTransceiver "{5C669673E8C94083}" {
-      "Transmitting Range" 1200
+      "Transmitting Range" 900
      }
     }
    }
@@ -56,13 +71,19 @@ $grp GenericEntity : "{1391CE8C0E255636}Prefabs/Systems/MilitaryBase/ConflictMil
   coords 1029.022 290.145 1811.861
   angleY -5.148
  }
- {
+ Richahlam {
   components {
    SCR_CampaignMilitaryBaseComponent "{5AFC974A70234D1C}" {
     m_bDisableWhenUnusedAsHQ 0
+    m_sBaseName "Richahlam"
+    m_fAntennaRange 1000
+    m_aWhiteList {
+     "Relay St. North"
+    }
    }
    SCR_CampaignSeizingComponent "{5C66967235FBEEA3}" {
     m_fMaximumSeizingTime 6
+    m_fMinimumSeizingTime 4
    }
    SCR_CoverageRadioComponent "{5C669673C2A82A2B}" {
     Transceivers {
@@ -77,8 +98,14 @@ $grp GenericEntity : "{1391CE8C0E255636}Prefabs/Systems/MilitaryBase/ConflictMil
  }
 }
 $grp GenericEntity : "{522DCD528AE27052}Prefabs/Systems/MilitaryBase/ConflictRelayRadio.et" {
- {
+ South_Relay_St {
   components {
+   SCR_CampaignMilitaryBaseComponent "{5C727AD73024FB00}" {
+    m_sBaseName "South Relay St."
+    m_aWhiteList {
+     "COP Phoenix" "Kandlay"
+    }
+   }
    SCR_CoverageRadioComponent "{5C727AD73024FB2A}" {
     Transceivers {
      RelayTransceiver "{5C727AD73024FB39}" {
@@ -89,17 +116,34 @@ $grp GenericEntity : "{522DCD528AE27052}Prefabs/Systems/MilitaryBase/ConflictRel
   }
   coords 1565.211 359.259 1605.777
  }
- {
+ North_Relay_St {
   components {
+   SCR_CampaignMilitaryBaseComponent "{5C727AD73024FB00}" {
+    m_sBaseName "North Relay St."
+    m_aWhiteList {
+     "Nangalam" "Richahlam"
+    }
+   }
    SCR_CoverageRadioComponent "{5C727AD73024FB2A}" {
     Transceivers {
      RelayTransceiver "{5C727AD73024FB39}" {
-      "Transmitting Range" 1200
+      "Transmitting Range" 1150
      }
     }
    }
   }
-  coords 1762.346 282.9 2825.207
-  angleY -43.045
+  coords 1754.679 255.178 2832.643
+  angleY -167.045
+  {
+   GenericEntity {
+    ID "5C727AD606EB0C1C"
+    {
+     GenericEntity {
+      ID "6282C0828CE8416F"
+      angleY -34.688
+     }
+    }
+   }
+  }
  }
 }

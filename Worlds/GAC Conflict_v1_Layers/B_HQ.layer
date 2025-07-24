@@ -1,16 +1,22 @@
 $grp GenericEntity : "{1391CE8C0E255636}Prefabs/Systems/MilitaryBase/ConflictMilitaryBase.et" {
- ConflictMilitaryBase {
+ SE_Main_Base {
   components {
    SCR_CampaignMilitaryBaseComponent "{5AFC974A70234D1C}" {
     m_bCanBeHQ 1
     m_bIsSupplyHub 1
+    m_sBaseName "Main Op Base SE"
+    m_aWhiteList {
+     "Chichal"
+    }
    }
    SCR_CampaignSeizingComponent "{5C66967235FBEEA3}" {
     Enabled 0
+    m_fMinimumSeizingTime 4
    }
    SCR_CoverageRadioComponent "{5C669673C2A82A2B}" {
     Transceivers {
      RelayTransceiver "{5C669673E8C94083}" {
+      "Transmitting Range" 1000
      }
     }
     m_bIsSource 1
@@ -31,17 +37,31 @@ $grp GenericEntity : "{1391CE8C0E255636}Prefabs/Systems/MilitaryBase/ConflictMil
    }
   }
  }
- ConflictMilitaryBase2 {
+ NW_Main_Base {
   components {
    SCR_CampaignMilitaryBaseComponent "{5AFC974A70234D1C}" {
     m_bCanBeHQ 1
     m_bIsSupplyHub 1
+    m_sBaseName "Main Op Base NW"
+    m_fAntennaRange 1000
+    m_aWhiteList {
+     "Richahlam"
+    }
    }
    SCR_CampaignSeizingComponent "{5C66967235FBEEA3}" {
     Enabled 0
+    m_fMinimumSeizingTime 4
    }
    SCR_CoverageRadioComponent "{5C669673C2A82A2B}" {
+    Transceivers {
+     RelayTransceiver "{5C669673E8C94083}" {
+      "Transmitting Range" 1000
+     }
+    }
     m_bIsSource 1
+   }
+   SCR_FactionAffiliationComponent "{5AFC974A2595F05D}" {
+    "faction affiliation" "US"
    }
   }
   coords 222.848 97.441 3681.838

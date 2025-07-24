@@ -3,6 +3,20 @@ GameProject {
  GUID "65ED0884EA7D6B08"
  TITLE "GAC Conflict"
  Dependencies {
-  "5C9691EA7FD7A79F" "60B524F7A5AE96A8" "58D0FB3206B6F859"
+  "5C9691EA7FD7A79F" "60B524F7A5AE96A8" "58D0FB3206B6F859" "64610AFB74AA9842"
+ }
+ Configurations {
+  GameProjectConfig PC {
+  }
+  GameProjectConfig XBOX_ONE {
+  }
+  GameProjectConfig XBOX_SERIES {
+  }
+  GameProjectConfig PS4 {
+  }
+  GameProjectConfig PS5 {
+  }
+  GameProjectConfig HEADLESS {
+  }
  }
 }

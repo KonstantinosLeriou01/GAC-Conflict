@@ -1,0 +1,14 @@
+SCR_AIGroup : "{DDF3799FA1387848}Prefabs/Groups/BLUFOR/Group_US_RifleSquad.et" {
+ ID "0000000000000001"
+ components {
+  SCR_GroupIdentityComponent "{56366C5C50AD3CF2}" {
+   m_MilitarySymbol SCR_MilitarySymbol "{56366C5C4E32A359}" {
+    m_Identity UNKNOWN
+   }
+  }
+ }
+ m_faction "MEI"
+ m_aUnitPrefabSlots {
+  "{58B923E15109E91A}Prefabs/Characters/Factions/IND/MEI/Character_MEI_Leader.et" "{9CE1BEFD75DE8BF1}Prefabs/Characters/Factions/IND/MEI/Character_MEI_Randomized.et" "{9CE1BEFD75DE8BF1}Prefabs/Characters/Factions/IND/MEI/Character_MEI_Randomized.et" "{9CE1BEFD75DE8BF1}Prefabs/Characters/Factions/IND/MEI/Character_MEI_Randomized.et" "{9CE1BEFD75DE8BF1}Prefabs/Characters/Factions/IND/MEI/Character_MEI_Randomized.et" "{9CE1BEFD75DE8BF1}Prefabs/Characters/Factions/IND/MEI/Character_MEI_Randomized.et" "{9CE1BEFD75DE8BF1}Prefabs/Characters/Factions/IND/MEI/Character_MEI_Randomized.et"
+ }
+}

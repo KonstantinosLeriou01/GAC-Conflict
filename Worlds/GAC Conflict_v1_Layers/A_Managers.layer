@@ -50,6 +50,7 @@ SCR_GameModeCampaign GameMode_Campaign : "{3B230AAC5252108F}Prefabs/MP/Modes/Con
  m_fVictoryTimer 900
  m_iRegularSuppliesIncomeExtra 0
  m_iHQStartingSupplies 3000
+ m_sINDFORFactionKey "MEI"
 }
 ScriptedChatEntity : "{536D80EB494DDC43}Prefabs/MP/Campaign/CampaignMPChatEntity.et" {
  coords 1298.082 347.416 1768.087
@@ -60,8 +61,77 @@ RadioManagerEntity : "{B8E09FAB91C4ECCD}Prefabs/Radio/RadioManager.et" {
 SCR_CampaignFactionManager CampaignFactionManager : "{F1AC26310BAE3788}Prefabs/MP/Campaign/CampaignFactionManager.et" {
  coords 1843.281 234.658 1498.201
  Factions {
+  SCR_CampaignFaction "{50B30C3AF4BFD934}" : "{15B582F8FA0B0940}Configs/Factions/USSR_Campaign.conf" {
+   m_sFactionBackground "{21533F2089005056}UI/Textures/DeployMenu/Loadout-BG/Loadout_BG_USSR.imageset"
+   m_aStartingVehicles {
+   }
+  }
+  SCR_CampaignFaction "{50B30C3ADB052C80}" : "{ADFDBDA163950168}Configs/Factions/US_Campaign.conf" {
+   m_aEntityCatalogs {
+    SCR_EntityCatalogMultiList "{5C68A0EEB3F124F9}" {
+     m_aMultiLists {
+      SCR_EntityCatalogMultiListEntry "{644872C8E58DC4F3}" {
+       m_aEntities {
+        SCR_EntityCatalogEntry "{65F13B3C9C7050E0}" {
+         m_sEntityPrefab "{2F5C73DF8EAA0512}Prefabs/Characters/Uniforms/Crye_Shirt/crye_shirt_GreekLizard.et"
+         m_aEntityDataList {
+          SCR_ArsenalItem "{65F13B3CE8FD7599}" {
+           m_eItemType TORSO
+          }
+         }
+        }
+       }
+      }
+      SCR_EntityCatalogMultiListEntry "{61AE911F3D939405}" {
+       m_aEntities {
+        SCR_EntityCatalogEntry "{65F13B3CD7622CE4}" {
+         m_sEntityPrefab "{218E9B68B4CA1BDA}Prefabs/Characters/Uniforms/Crye_Pants/crye_pants_GreekLizard.et"
+         m_aEntityDataList {
+          SCR_ArsenalItem "{65F13B3CD38F42F2}" {
+           m_eItemType LEGS
+          }
+         }
+        }
+       }
+      }
+     }
+    }
+   }
+   m_sFactionBackground "{F8AC305446D5D480}UI/Textures/DeployMenu/Loadout-BG/Loadout_US_BG.imageset"
+   m_aStartingVehicles {
+   }
+  }
   SCR_CampaignFaction "{56F0C3A6336375DC}" {
    m_bShowInWelcomeScreenIfNonPlayable 0
+  }
+  SCR_Faction "{60DCF47AEF40BD72}" : "{3FA20B01D950D31F}Configs/Factions/CIV.conf" {
+  }
+  SCR_Faction "{65F13B32C60F4E99}" : "{830970F42196ADAF}Configs/Factions/MEI.conf" {
+   m_aEntityCatalogs {
+    SCR_EntityCatalogMultiList "{5C68A0EAB887A0C4}" {
+     m_aMultiLists {
+      SCR_EntityCatalogMultiListEntry "{6583450A200B0899}" {
+       m_aEntities {
+        SCR_EntityCatalogEntry "{6583450A200B2C99}" {
+         m_sEntityPrefab "{BE77E238E4F92A28}Prefabs/Groups/MEI/AmbientPatrols/Group_MEI_RifleSquad_NotSpawned.et"
+        }
+        SCR_EntityCatalogEntry "{6583450A200B2C9D}" {
+         m_sEntityPrefab "{BE77E238E4F92A28}Prefabs/Groups/MEI/AmbientPatrols/Group_MEI_RifleSquad_NotSpawned.et"
+        }
+        SCR_EntityCatalogEntry "{6583450A200B2C80}" {
+         m_sEntityPrefab "{BE77E238E4F92A28}Prefabs/Groups/MEI/AmbientPatrols/Group_MEI_RifleSquad_NotSpawned.et"
+        }
+        SCR_EntityCatalogEntry "{6583450A200B2C87}" {
+         m_sEntityPrefab "{BE77E238E4F92A28}Prefabs/Groups/MEI/AmbientPatrols/Group_MEI_RifleSquad_NotSpawned.et"
+        }
+        SCR_EntityCatalogEntry "{6583450A200B6ACE}" {
+         m_sEntityPrefab "{BE77E238E4F92A28}Prefabs/Groups/MEI/AmbientPatrols/Group_MEI_RifleSquad_NotSpawned.et"
+        }
+       }
+      }
+     }
+    }
+   }
   }
  }
  {

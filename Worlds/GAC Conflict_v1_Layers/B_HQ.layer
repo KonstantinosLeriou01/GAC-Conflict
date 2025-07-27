@@ -2,9 +2,11 @@ $grp GenericEntity : "{1391CE8C0E255636}Prefabs/Systems/MilitaryBase/ConflictMil
  SE_Main_Base {
   components {
    SCR_CampaignMilitaryBaseComponent "{5AFC974A70234D1C}" {
+    m_iRadius 300
     m_bCanBeHQ 1
     m_bIsSupplyHub 1
-    m_sBaseName "Main Op Base SE"
+    m_sBaseName "Main Op. Base SE"
+    m_fAntennaRange 1000
     m_aWhiteList {
      "Chichal"
     }
@@ -21,12 +23,20 @@ $grp GenericEntity : "{1391CE8C0E255636}Prefabs/Systems/MilitaryBase/ConflictMil
     }
     m_bIsSource 1
    }
+   SCR_FactionAffiliationComponent "{5AFC974A2595F05D}" {
+    "faction affiliation" "USSR"
+   }
+   SCR_MilitaryBaseAreaMeshComponent "{5AFC9B0FB2E4AF40}" {
+    m_eShape RECTANGLE
+    m_fHeight 152.7
+    m_vResolution 12
+   }
   }
-  coords 3715.62 280 430.077
-  angleY 92.898
+  coords 3777.245 280 429.882
+  angleY -109.528
   {
    CommentEntity {
-    coords 0 1 0
+    coords -21.127 1 53.595
     m_Comment "ConflictMilitaryBase: "\
     "At least two bases need \"Can be HQ\" param checked. Place bases and control points wherever you wish."
     m_Color 0 0 0
@@ -35,14 +45,20 @@ $grp GenericEntity : "{1391CE8C0E255636}Prefabs/Systems/MilitaryBase/ConflictMil
     m_BackgroundColor 1 0.6 0
     m_BackgroundTransparency 0
    }
+   SCR_CampaignSpawnPointGroup {
+    ID "5C6696731466AF36"
+    coords -4.227 0 3.758
+    angleY 19.282
+   }
   }
  }
  NW_Main_Base {
   components {
    SCR_CampaignMilitaryBaseComponent "{5AFC974A70234D1C}" {
+    m_iRadius 350
     m_bCanBeHQ 1
     m_bIsSupplyHub 1
-    m_sBaseName "Main Op Base NW"
+    m_sBaseName "Main Op. Base NW"
     m_fAntennaRange 1000
     m_aWhiteList {
      "Richahlam"
@@ -63,9 +79,12 @@ $grp GenericEntity : "{1391CE8C0E255636}Prefabs/Systems/MilitaryBase/ConflictMil
    SCR_FactionAffiliationComponent "{5AFC974A2595F05D}" {
     "faction affiliation" "US"
    }
+   SCR_MilitaryBaseAreaMeshComponent "{5AFC9B0FB2E4AF40}" {
+    m_eShape RECTANGLE
+   }
   }
-  coords 222.848 97.441 3681.838
-  angleY 135.226
+  coords 275.594 89.696 3632.621
+  angleY -152.774
   {
    CommentEntity {
     coords 0 1 0

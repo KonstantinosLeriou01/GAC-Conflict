@@ -2,6 +2,7 @@ $grp GenericEntity : "{1391CE8C0E255636}Prefabs/Systems/MilitaryBase/ConflictMil
  Kandlay {
   components {
    SCR_CampaignMilitaryBaseComponent "{5AFC974A70234D1C}" {
+    m_iRadius 90
     m_bIsControlPoint 1
     m_bDisableWhenUnusedAsHQ 0
     m_sBaseName "Kandlay"
@@ -20,18 +21,22 @@ $grp GenericEntity : "{1391CE8C0E255636}Prefabs/Systems/MilitaryBase/ConflictMil
      }
     }
    }
+   SCR_FactionAffiliationComponent "{5AFC974A2595F05D}" {
+    "faction affiliation" "MEI"
+   }
   }
   coords 2767.534 170 1449.275
-  angleY 37.288
+  angleY 40.992
  }
- Airfield {
+ Bargam_Airfield {
   components {
    SCR_CampaignMilitaryBaseComponent "{5AFC974A70234D1C}" {
+    m_iRadius 110
     m_bIsControlPoint 1
     m_bDisableWhenUnusedAsHQ 0
-    m_sBaseName "Airfield"
+    m_sBaseName "Bargam Airfield"
     m_aWhiteList {
-     "Nangalam" "Tor Kelay"
+     "Great Relay St." "Tor Kelay" "Shan Kalay Outskirts"
     }
    }
    SCR_CampaignSeizingComponent "{5C66967235FBEEA3}" {
@@ -44,6 +49,9 @@ $grp GenericEntity : "{1391CE8C0E255636}Prefabs/Systems/MilitaryBase/ConflictMil
       "Transmitting Range" 1100
      }
     }
+   }
+   SCR_FactionAffiliationComponent "{5AFC974A2595F05D}" {
+    "faction affiliation" "MEI"
    }
   }
   coords 2762.505 9.999 3120.624
@@ -56,7 +64,7 @@ $grp GenericEntity : "{1391CE8C0E255636}Prefabs/Systems/MilitaryBase/ConflictMil
     m_bDisableWhenUnusedAsHQ 0
     m_sBaseName "Nangalam"
     m_aWhiteList {
-     "North Relay St." "Airfield"
+     "Bargam Airfield"
     }
    }
    SCR_CampaignSeizingComponent "{5C66967235FBEEA3}" {
@@ -70,19 +78,24 @@ $grp GenericEntity : "{1391CE8C0E255636}Prefabs/Systems/MilitaryBase/ConflictMil
      }
     }
    }
+   SCR_FactionAffiliationComponent "{5AFC974A2595F05D}" {
+    "faction affiliation" "MEI"
+   }
   }
-  coords 1986.863 17.247 3796.968
+  coords 1987.518 18.686 3797.959
   angleY -133.595
   {
    SCR_CampaignSpawnPointGroup {
     ID "5C6696731466AF36"
     coords 0 0 0
+    angleY 9.706
    }
   }
  }
  Tangalai {
   components {
    SCR_CampaignMilitaryBaseComponent "{5AFC974A70234D1C}" {
+    m_iRadius 90
     m_bIsControlPoint 1
     m_bDisableWhenUnusedAsHQ 0
     m_sBaseName "Tangalai"
@@ -100,6 +113,9 @@ $grp GenericEntity : "{1391CE8C0E255636}Prefabs/Systems/MilitaryBase/ConflictMil
       "Transmitting Range" 1250
      }
     }
+   }
+   SCR_FactionAffiliationComponent "{5AFC974A2595F05D}" {
+    "faction affiliation" "MEI"
    }
   }
   coords 258.96 155.352 2180.419
@@ -126,8 +142,39 @@ $grp GenericEntity : "{1391CE8C0E255636}Prefabs/Systems/MilitaryBase/ConflictMil
      }
     }
    }
+   SCR_FactionAffiliationComponent "{5AFC974A2595F05D}" {
+    "faction affiliation" "MEI"
+   }
   }
   coords 1145.01 233.291 1019.052
   angleY -177.74
+ }
+ Shan_Kalay_Outskirts {
+  components {
+   SCR_CampaignMilitaryBaseComponent "{5AFC974A70234D1C}" {
+    m_iRadius 95
+    m_bIsControlPoint 1
+    m_bDisableWhenUnusedAsHQ 0
+    m_sBaseName "Shan Kalay Outskirts"
+    m_aWhiteList {
+     "Cham" "Bargam Airfield"
+    }
+   }
+   SCR_CampaignSeizingComponent "{5C66967235FBEEA3}" {
+    m_fMaximumSeizingTime 6
+    m_fMinimumSeizingTime 4
+   }
+   SCR_CoverageRadioComponent "{5C669673C2A82A2B}" {
+    Transceivers {
+     RelayTransceiver "{5C669673E8C94083}" {
+      "Transmitting Range" 1200
+     }
+    }
+   }
+   SCR_FactionAffiliationComponent "{5AFC974A2595F05D}" {
+    "faction affiliation" "MEI"
+   }
+  }
+  coords 3867.669 12.594 2748.493
  }
 }

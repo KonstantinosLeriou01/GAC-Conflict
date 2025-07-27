@@ -1,3 +1,128 @@
 GenericEntity : "{3BA9D94C4EE9B33B}Prefabs/Compositions/Slotted/CompositionBase.et" {
  ID "5282DCB5DFC8538F"
+ {
+  GenericEntity {
+   ID "5D45393FCDDCFA0B"
+   components {
+    SCR_ResourceComponent "{5D8AA552F85C2FBB}" {
+     m_aContainers {
+      SCR_ResourceContainerVirtual "{5D8AA552C6324D54}" {
+       m_fResourceGain 1500
+       m_fResourceGainTimeout 120
+      }
+     }
+    }
+   }
+   {
+    GenericEntity {
+     ID "5D45393FFA2FEF00"
+     components {
+      SCR_ResourceComponent "{5D247A59598D71AE}" {
+       m_aContainers {
+        SCR_ResourceContainer "{5D3CDAE74F1A6127}" {
+         m_fResourceValueCurrent 375
+         m_fResourceValueMax 375
+        }
+       }
+      }
+     }
+    }
+    GenericEntity {
+     ID "5D45393FFA2FEF02"
+     components {
+      SCR_ResourceComponent "{5D247A59598D71AE}" {
+       m_aContainers {
+        SCR_ResourceContainer "{5D3CDAE74F1A6127}" {
+         m_fResourceValueCurrent 375
+         m_fResourceValueMax 375
+        }
+       }
+      }
+     }
+    }
+    GenericEntity {
+     ID "5D45393FFA2FEF07"
+     components {
+      SCR_ResourceComponent "{5D247A59598D71AE}" {
+       m_aContainers {
+        SCR_ResourceContainer "{5D3CDAE74F1A6127}" {
+         m_fResourceValueCurrent 375
+         m_fResourceValueMax 375
+        }
+       }
+      }
+     }
+    }
+    GenericEntity {
+     ID "5D45393FFA2FEF0B"
+     components {
+      SCR_ResourceComponent "{5D247A59598D71AE}" {
+       m_aContainers {
+        SCR_ResourceContainer "{5D3CDAE74F1A6127}" {
+         m_fResourceValueCurrent 375
+         m_fResourceValueMax 375
+        }
+       }
+      }
+     }
+    }
+    GenericEntity {
+     ID "5D45393FFA2FEF0E"
+     components {
+      SCR_ResourceComponent "{5D247A59598D71AE}" {
+       m_aContainers {
+        SCR_ResourceContainer "{5D3CDAE74F1A6127}" {
+         m_fResourceValueCurrent 375
+         m_fResourceValueMax 375
+        }
+       }
+      }
+     }
+    }
+    GenericEntity {
+     ID "5D45393FFA2FEF0F"
+     components {
+      SCR_ResourceComponent "{5D247A59598D71AE}" {
+       m_aContainers {
+        SCR_ResourceContainer "{5D3CDAE74F1A6127}" {
+         m_fResourceValueCurrent 375
+         m_fResourceValueMax 375
+        }
+       }
+      }
+     }
+    }
+    GenericEntity {
+     ID "5D45393FFA2FEF13"
+     components {
+      SCR_ResourceComponent "{5D247A59598D71AE}" {
+       m_aContainers {
+        SCR_ResourceContainer "{5D3CDAE74F1A6127}" {
+         m_fResourceValueCurrent 375
+         m_fResourceValueMax 375
+        }
+       }
+      }
+     }
+    }
+    GenericEntity {
+     ID "5D45393FFA2FEF1C"
+     components {
+      SCR_ResourceComponent "{5D247A59598D71AE}" {
+       m_aContainers {
+        SCR_ResourceContainer "{5D3CDAE74F1A6127}" {
+         m_fResourceValueCurrent 375
+         m_fResourceValueMax 375
+        }
+       }
+      }
+     }
+    }
+   }
+  }
+  GenericEntity : "{27941CDF3E7E1A5F}Prefabs/MP/Campaign/CampaignRemnantsSupplyDepot.et" {
+   ID "65F12BF81E4DC98A"
+   coords 0 0 0
+  }
+ }
 }

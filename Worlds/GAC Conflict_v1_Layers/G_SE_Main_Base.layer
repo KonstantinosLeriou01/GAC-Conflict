@@ -1077,6 +1077,11 @@ GenericEntity : "{FB18EFE9C1A81E29}Prefabs/Compositions/Slotted/SlotFlatMedium/V
   }
   GenericEntity {
    ID "5D22B941BA4ECAA0"
+   components {
+    SCR_CatalogEntitySpawnerComponent "{5D22B968F23A847A}" {
+     m_bNeedAllLabels 1
+    }
+   }
    coords -8.622 0 6.804
    angleY -3
   }

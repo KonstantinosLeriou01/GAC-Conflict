@@ -41,13 +41,206 @@ PerceptionManager PerceptionManager : "{028DAEAD63E056BE}Prefabs/World/Game/Perc
 }
 SCR_GameModeCampaign GameMode_Campaign : "{3B230AAC5252108F}Prefabs/MP/Modes/Conflict/GameMode_Campaign.et" {
  components {
-  SCR_TimeAndWeatherHandlerComponent "{5CC49B5A1313B84E}" {
-   m_bRandomStartingWeather 0
+  RHS_AdditionalGameModeSettingsComponent "{61AE627E9607513B}" {
+   Enabled 0
+  }
+  SCR_AdditionalGameModeSettingsComponent "{6170E11C3C452ACC}" {
+   m_bAdditionalArtilleryOrderDistancePenalty 1
+  }
+  SCR_ArsenalManagerComponent "{6120A34EB1E9BBEF}" {
+   m_fLoadoutSpawnSupplyCostMultiplier 1
+   m_eArsenalGameModeType CAMPAIGN
+   m_bRankLockedItems 1
+  }
+  SCR_CampaignBuildingManagerComponent "{5C6878C4C62529D2}" {
+   m_iCompositionRefundPercentage 75
+  }
+  SCR_CampaignBuildingManagerComponent "{60EC2158F48C679A}" {
+   Enabled 0
+  }
+  SCR_CommandingManagerComponent "{5D16783AFAE684F8}" {
+   m_sCommandsConfigPath "{54764D4E706F348C}Configs/Commanding/Commands.conf"
+  }
+  SCR_DebriefingScreenComponent "{5D349E302A88E42C}" {
+   m_BaseLayout SCR_DebriefingScreenUnevenFourTiles "{5D349E3023E18896}" {
+    m_TopLeftTile SCR_DebriefingScreenBigImageContent "{5D349E30244A4792}" {
+     m_sContentImage "{62897631F4A6C7F3}UI/Textures/MissionLoadingScreens/Reforger_ConflictArt_UI.edds"
+    }
+    m_TopRightTile SCR_DebriefingScreenFinishedObjectivesContent "{5D349E305DB53338}" {
+     m_bIsInteractible 1
+     m_sTitleText "#AR-DebriefingScreen_Objectives"
+     m_sFinishedObjectivesTileLayout "{B3A6950DF2D34576}UI/layouts/Menus/DeployMenu/DebriefingScreenFinishedObjectivesTile.layout"
+    }
+    m_BottomLeftTile SCR_DebriefingScreenSummaryContent "{5D349E3056A9E455}" {
+     m_sTitleText "#AR-DebriefingScreen_Debriefing"
+     m_sSubtitleText "#AR-DebriefingScreen_Subtitle"
+     m_sSubtitleLostText "#AR-DebriefingScreen_Subtitle_Lost"
+    }
+    m_BottomRightTile SCR_DebriefingScreenStatisticsContent "{5D349E3049CC104E}" {
+     m_sTitleText "#AR-DebriefingScreen_Statistics"
+    }
+   }
+  }
+  SCR_GameModeHealthSettings "{5A22E11F9ACBB1DF}" {
+   m_bKillIndefinitelyUnconsciousPlayers 1
+   m_bPermitUnconsciousVON 0
+  }
+  SCR_GameOverScreenManagerComponent "{56DEC646298AD219}" {
+   m_GameOverScreenConfig SCR_GameOverScreenConfig "{56DEC6462FFDD82D}" {
+    m_aGameOverScreens {
+     SCR_FactionGameOverScreenInfo "{568E79DBAC19013D}" {
+      m_OptionalParams SCR_BaseGameOverScreenInfoOptional "{568E79DBB3E97D11}" {
+       m_sDebriefing "#AR-Campaign_MatchResult_DefeatDetail_Score"
+      }
+     }
+    }
+   }
+  }
+  SCR_IdentityManagerComponent "{5AEEA80681EA61AF}" {
+   m_bGenerateValuableIntel 1
+  }
+  SCR_MapConfigComponent "{5C669498E250A34B}" {
+   m_sSpawnMapConfigPath "{901F9ED2088BBCA4}Configs/Map/MapSpawnConflict.conf"
+  }
+  SCR_NametagConfigComponent "{571AA9E54FC9210D}" {
+   m_sConfigPath "{09F7AAA14A642683}Configs/NameTags/NametagFriendlies.conf"
+  }
+  SCR_NotificationSenderComponent "{56FA84B04BE7D4C0}" {
+   m_iKillFeedType FULL
+  }
+  SCR_PerceivedFactionManagerComponent "{61AA7E6E0C6A76F9}" {
+   m_eCharacterPerceivedFactionOutfitType DISABLED
+  }
+  SCR_PlayerSpawnPointManagerComponent "{5CDABA98894199D0}" {
+   m_bRadioVehicleSpawningEnabled 1
+  }
+  SCR_RespawnBriefingComponent "{5B2A94A3CF791D6F}" {
+   m_sJournalConfigPath "{FFB1A12A7BFC4957}Configs/Journal/JournalConflict.conf"
+   m_Info SCR_UIInfo "{5B2A94A66BB56FB3}" {
+    Description "#AR-Campaign_GamemodeTutorial"
+   }
+   m_aGameModeHints {
+    SCR_UIInfo "{5B2A94A72CAF0E18}" {
+     Name "#AR-BriefingCampaign_Hint_Name_01"
+     Description "#AR-BriefingCampaign_Hint_Description_01"
+     Icon "{324E923535DCACF8}UI/Textures/DeployMenu/Briefing/conflict_HintBanner_1_UI.edds"
+    }
+    SCR_UIInfo "{5B2A94A72AB20D65}" {
+     Name "#AR-BriefingCampaign_Hint_Name_02"
+     Description "#AR-BriefingCampaign_Hint_Description_02"
+     Icon "{3C50D67D082BA322}UI/Textures/DeployMenu/Briefing/conflict_HintBanner_2_UI.edds"
+    }
+    SCR_UIInfo "{5B2A94A729D6B272}" {
+     Name "#AR-BriefingCampaign_Hint_Name_03"
+     Description "#AR-BriefingCampaign_Hint_Description_03"
+     Icon "{39A515BAE3795994}UI/Textures/DeployMenu/Briefing/conflict_HintBanner_3_UI.edds"
+    }
+   }
+   m_aWinConditions {
+    SCR_BriefingVictoryCondition "{5B2A94A7531ADD24}" {
+     victoryCondition SEIZE
+     name "Condition_01"
+     description "#AR-BriefingCampaign_VictoryCondition_01"
+    }
+    SCR_BriefingVictoryCondition "{5B2A94A752415E44}" {
+     victoryCondition GUARD
+     name "Condition_02"
+     description "#AR-BriefingCampaign_VictoryCondition_02"
+    }
+    SCR_BriefingVictoryCondition "{5B2A94A75295460F}" {
+     victoryCondition SEIZE_RELAY
+     name "Condition_03"
+     description "#AR-BriefingCampaign_VictoryCondition_03"
+    }
+   }
+  }
+  SCR_RespawnSystemComponent "{56B2B4793051E7C9}" {
+   m_SpawnLogic SCR_MenuSpawnLogic "{5CEAA65B714D5CFF}" {
+   }
+  }
+  SCR_RespawnTimerComponent "{5B2A94A0E605AAFF}" {
+   m_fRespawnTime 30
+  }
+  SCR_SaveLoadComponent "{58FA739CBE3E9FC5}" {
+   m_Struct SCR_MissionStruct "{5C6E86B1D6F0EC89}" {
+    m_Struct0 SCR_CampaignStruct "{5C6E86B1D41E4E2F}" {
+    }
+    m_Struct1 SCR_EditorStruct "{5E2C9BB6F87D9794}" {
+     m_AttributeList SCR_EditorAttributeList "{5E2C9BB656E63FCF}" : "{F3D6C6D25642352C}Configs/Editor/AttributeLists/Edit.conf" {
+     }
+     m_bSaveFactions 0
+     m_bSaveMissionAttributes 0
+     m_eRequiredEntityFlags LINKED_CHILDREN
+    }
+    m_Struct2 SCR_EditorStruct "{604AE588166D0165}" {
+     m_AttributeList SCR_EditorAttributeList "{604AFD87084A5DB6}" {
+     }
+     m_bSaveFactions 0
+     m_bSaveMissionAttributes 0
+     m_eRequiredEntityFlags FREE_ROAM_BUILDING_AI
+    }
+   }
+   m_iAutosavePeriod 120
+  }
+  SCR_SpawnProtectionComponent "{5D167A246026C95B}" {
+   m_fProtectionTime 0.5
+  }
+  SCR_TimedSpawnPointComponent "{5D0A73EB7076C758}" {
+   m_fRespawnTime 15
+  }
+  SCR_WelcomeScreenComponent "{5D349E3E9CC39991}" {
+   m_BaseLayout SCR_WelcomeScreenThreeHorizontalColumns "{5D349E3E90D4315E}" {
+    m_LeftColumn SCR_WelcomeScreenFactionContent "{5D349E3E94785464}" {
+     m_sTitleText "#AR-DeployScreen_AvailableFactionsTitle"
+     m_sBottomTitleText "#AR-DeployScreen_MoreFactions"
+    }
+    m_MiddleColumn SCR_WelcomeScreenMissionObjectivesContent "{5D349E3E8A5CF4C3}" {
+     m_sTitleText "#AR-DebriefingScreen_Objectives"
+     m_aMissionObjectives {
+      SCR_WelcomeScreenMissionObjectives "{5D349E3F455821CC}" {
+       m_sObjectiveQuadName "Defend"
+       m_sDescription "#AR-BriefingCampaign_VictoryCondition_01"
+      }
+      SCR_WelcomeScreenMissionObjectives "{5D349E3F45C63A88}" {
+       m_sObjectiveQuadName "Seize"
+       m_sDescription "#AR-BriefingCampaign_VictoryCondition_02"
+      }
+      SCR_WelcomeScreenMissionObjectives "{5D349E3F45967A8B}" {
+       m_sObjectiveQuadName "Reconfigure"
+       m_sDescription "#AR-BriefingCampaign_VictoryCondition_03"
+      }
+     }
+    }
+    m_RightColumn SCR_WelcomeScreenIntroductionContent "{5D349E3E89289BE9}" {
+     m_bIsInteractible 1
+     m_sTitleText "#AR-FieldManual_Category_Introduction_Title"
+     m_aIntroduction {
+      SCR_WelcomeScreenIntroduction "{5D349E3F6FF705DE}" {
+       m_sContentImage "{F355C5692BEDC1E5}UI/Textures/FieldManual/MPModes/Conflict/Images/Conflict_loadScreen_UI.edds"
+       m_sContentTitleText "#AR-BriefingCampaign_Hint_Name_01"
+       m_sContentDescriptionText "#AR-FieldManual_Page_Conflict_Text_02"
+      }
+      SCR_WelcomeScreenIntroduction "{5D349E3F6C78332F}" {
+       m_sContentImage "{EFF804FB17026599}UI/Textures/FieldManual/MPModes/Conflict/Images/Conflict_service_antenna_UI.edds"
+       m_sContentTitleText "#AR-BriefingCampaign_Hint_Name_02"
+       m_sContentDescriptionText "#AR-BriefingCampaign_Hint_Description_02"
+      }
+      SCR_WelcomeScreenIntroduction "{5D349E3F6C38011F}" {
+       m_sContentImage "{E00CCCF1DB6DE5F3}UI/Textures/FieldManual/MPModes/Conflict/Images/Conflict_service_supply_UI.edds"
+       m_sContentTitleText "#AR-BriefingCampaign_Hint_Name_03"
+       m_sContentDescriptionText "#AR-BriefingCampaign_Hint_Description_03"
+      }
+     }
+    }
+   }
   }
  }
  coords 1843.281 233.951 1495.201
- m_iControlPointsThreshold 3
+ m_iControlPointsThreshold 4
  m_fVictoryTimer 900
+ m_iSuppliesReplenishThreshold 0
+ m_iSuppliesArrivalInterval 10
+ m_iRegularSuppliesIncome 150
  m_iRegularSuppliesIncomeExtra 0
  m_iHQStartingSupplies 3000
  m_sINDFORFactionKey "MEI"
@@ -61,34 +254,1214 @@ RadioManagerEntity : "{B8E09FAB91C4ECCD}Prefabs/Radio/RadioManager.et" {
 SCR_CampaignFactionManager CampaignFactionManager : "{F1AC26310BAE3788}Prefabs/MP/Campaign/CampaignFactionManager.et" {
  coords 1843.281 234.658 1498.201
  Factions {
-  SCR_CampaignFaction "{50B30C3AF4BFD934}" : "{15B582F8FA0B0940}Configs/Factions/USSR_Campaign.conf" {
-   m_sFactionBackground "{21533F2089005056}UI/Textures/DeployMenu/Loadout-BG/Loadout_BG_USSR.imageset"
-   m_aStartingVehicles {
-   }
-  }
-  SCR_CampaignFaction "{50B30C3ADB052C80}" : "{ADFDBDA163950168}Configs/Factions/US_Campaign.conf" {
+  SCR_CampaignFaction "{50B30C3AF4BFD934}" {
    m_aEntityCatalogs {
-    SCR_EntityCatalogMultiList "{5C68A0EEB3F124F9}" {
+    SCR_EntityCatalogMultiList "{5C68A0E9BD5E5DD9}" : "{3B679F1799D55F6F}Configs/EntityCatalog/USSR/Characters_EntityCatalog_USSR.conf" {
+    }
+    SCR_EntityCatalogMultiList "{5C9E82F285C09E24}" : "{09C2ED5F617A0390}Configs/EntityCatalog/USSR/Vehicles_EntityCatalog_USSR.conf" {
      m_aMultiLists {
-      SCR_EntityCatalogMultiListEntry "{644872C8E58DC4F3}" {
+      SCR_EntityCatalogMultiListEntry "{605697836F02AFD9}" {
        m_aEntities {
-        SCR_EntityCatalogEntry "{65F13B3C9C7050E0}" {
-         m_sEntityPrefab "{2F5C73DF8EAA0512}Prefabs/Characters/Uniforms/Crye_Shirt/crye_shirt_GreekLizard.et"
+        SCR_EntityCatalogEntry "{5D2348264EB93241}" {
+         m_sEntityPrefab "{16A674FE31B0921C}Prefabs/Vehicles/Wheeled/UAZ469/UAZ469_uncovered.et"
          m_aEntityDataList {
-          SCR_ArsenalItem "{65F13B3CE8FD7599}" {
-           m_eItemType TORSO
+          SCR_EntityCatalogEditorData "{6052F486C1803290}" {
+           m_eValidEditorModes 33
+          }
+          SCR_EntityCatalogSpawnerData "{5D247326389CD3ED}" {
+           m_eSlotTypes 24
+          }
+         }
+        }
+        SCR_EntityCatalogEntry "{5D2348264D538E43}" {
+         m_sEntityPrefab "{259EE7B78C51B624}Prefabs/Vehicles/Wheeled/UAZ469/UAZ469.et"
+         m_aEntityDataList {
+          SCR_EntityCatalogEditorData "{6052F486CD0DB8D4}" {
+           m_eValidEditorModes 33
+          }
+          SCR_EntityCatalogSpawnerData "{5D24732603A239C9}" {
+           m_eSlotTypes 24
+          }
+         }
+        }
+        SCR_EntityCatalogEntry "{605ECB22983CD9ED}" {
+         m_sEntityPrefab "{0B4DEA8078B78A9B}Prefabs/Vehicles/Wheeled/UAZ469/UAZ469_PKM.et"
+         m_aEntityDataList {
+          SCR_EntityCatalogEditorData "{605ECB228F006CEC}" {
+           m_eValidEditorModes 33
+          }
+          SCR_EntityCatalogSpawnerData "{605ECB22D446F655}" {
+           m_eSlotTypes 24
+          }
+         }
+        }
+        SCR_EntityCatalogEntry "{5D8951ED14163851}" {
+         m_sEntityPrefab "{43C4AF1EEBD001CE}Prefabs/Vehicles/Wheeled/UAZ452/UAZ452_ambulance.et"
+         m_aEntityDataList {
+          SCR_EntityCatalogEditorData "{6052F486D748916B}" {
+           m_eValidEditorModes 33
+          }
+          SCR_EntityCatalogSpawnerData "{5D8951ED1868BCEB}" {
+           m_eSlotTypes 24
+          }
+         }
+        }
+        SCR_EntityCatalogEntry "{62BCE83B1CCA9A1B}" {
+         m_sEntityPrefab "{1FBB492E86002BF5}Prefabs/Vehicles/Wheeled/UAZ452/UAZ452_transport.et"
+         m_aEntityDataList {
+          SCR_EntityCatalogEditorData "{6052F486D748916B}" {
+           m_eValidEditorModes 33
+          }
+          SCR_EntityCatalogSpawnerData "{5D8951ED1868BCEB}" {
+           m_eSlotTypes 24
+          }
+         }
+        }
+        SCR_EntityCatalogEntry "{62F4DEB268B5ADC8}" {
+         m_sEntityPrefab "{01F65EFB8D767A91}Prefabs/Vehicles/Wheeled/UAZ452/UAZ452_cargo.et"
+         m_aEntityDataList {
+          SCR_EntityCatalogEditorData "{62F4DEB2595BA83E}" {
+           m_eValidEditorModes 33
+          }
+          SCR_EntityCatalogSpawnerData "{62F4DEB24860F6C0}" {
+           m_eSlotTypes 24
+          }
+         }
+        }
+        SCR_EntityCatalogEntry "{5D2348264DE21409}" {
+         m_sEntityPrefab "{16C1F16C9B053801}Prefabs/Vehicles/Wheeled/Ural4320/Ural4320_transport.et"
+         m_aEntityDataList {
+          SCR_EntityCatalogEditorData "{6052F486D12B561E}" {
+           m_eValidEditorModes 33
+          }
+          SCR_EntityCatalogSpawnerData "{5D2473261737C1FA}" {
+           m_eSlotTypes VEHICLE_MEDIUM
+          }
+         }
+        }
+        SCR_EntityCatalogEntry "{5D2348264CDF5256}" {
+         m_sEntityPrefab "{D9B91FAB817A6033}Prefabs/Vehicles/Wheeled/Ural4320/Ural4320_transport_covered.et"
+         m_aEntityDataList {
+          SCR_EntityCatalogEditorData "{6052F486DB57170D}" {
+           m_eValidEditorModes 33
+          }
+          SCR_EntityCatalogSpawnerData "{5D2473261299E292}" {
+           m_eSlotTypes VEHICLE_MEDIUM
+          }
+         }
+        }
+        SCR_EntityCatalogEntry "{5D23482600FF120D}" {
+         m_sEntityPrefab "{4C81D7ED8F8C0D87}Prefabs/Vehicles/Wheeled/Ural4320/Ural4320_tanker.et"
+         m_aEntityDataList {
+          SCR_EntityCatalogEditorData "{6052F486B54DEDCC}" {
+           m_eValidEditorModes 33
+          }
+          SCR_EntityCatalogSpawnerData "{5D2473261DE79906}" {
+           m_eSlotTypes VEHICLE_MEDIUM
+          }
+         }
+        }
+        SCR_EntityCatalogEntry "{5D2348260FAC0091}" {
+         m_sEntityPrefab "{1BABF6B33DA0AEB6}Prefabs/Vehicles/Wheeled/Ural4320/Ural4320_command.et"
+         m_aEntityDataList {
+          SCR_EntityCatalogEditorData "{6052F486BE7B532C}" {
+           m_eValidEditorModes 33
+          }
+          SCR_EntityCatalogSpawnerData "{5D247327E1AF547A}" {
+           m_eSlotTypes VEHICLE_MEDIUM
+          }
+         }
+        }
+        SCR_EntityCatalogEntry "{5C76BEF2AC21DBA1}" {
+         m_bEnabled 0
+        }
+        SCR_EntityCatalogEntry "{605098A49FEFA106}" {
+         m_sEntityPrefab "{3336BE330C4F355B}Prefabs/Vehicles/Wheeled/Ural4320/Ural4320_ammo.et"
+         m_aEntityDataList {
+          SCR_EntityCatalogEditorData "{6052F486ADACE87E}" {
+          }
+         }
+        }
+        SCR_EntityCatalogEntry "{5C76BEF2ADE9B96D}" {
+         m_sEntityPrefab "{A5647958579A4149}Prefabs/Vehicles/Wheeled/Ural4320/Ural4320_repair.et"
+         m_aEntityDataList {
+          SCR_EntityCatalogEditorData "{6052F486A863D4AD}" {
+           m_eValidEditorModes 33
+          }
+          SCR_EntityCatalogSpawnerData "{5D2473263361847F}" {
+           m_eSlotTypes VEHICLE_MEDIUM
+          }
+         }
+        }
+        SCR_EntityCatalogEntry "{5D2348260E9B4B90}" {
+         m_bEnabled 0
+        }
+        SCR_EntityCatalogEntry "{5D2348264B456B9D}" {
+         m_sEntityPrefab "{C012BB3488BEA0C2}Prefabs/Vehicles/Wheeled/BTR70/BTR70.et"
+         m_aEntityDataList {
+          SCR_EntityCatalogEditorData "{6052F48682B04E85}" {
+          }
+          SCR_EntityCatalogSpawnerData "{5D247327F5578DB3}" {
+           m_eSlotTypes VEHICLE_MEDIUM
+          }
+         }
+        }
+        SCR_EntityCatalogEntry "{63229A276327C12F}" {
+         m_sEntityPrefab "{BD75A18920BD1278}Prefabs/Vehicles/Wheeled/Conflict_Variants/BTR70_Conflict.et"
+         m_aEntityDataList {
+          SCR_EntityCatalogEditorData "{63229A276327C17F}" {
+           m_eValidEditorModes BUILDING
+          }
+          SCR_EntityCatalogSpawnerData "{63229A276327C17A}" {
+           m_eSlotTypes VEHICLE_MEDIUM
+          }
+         }
+        }
+        SCR_EntityCatalogEntry "{62ACD28D77EE8A26}" {
+         m_sEntityPrefab "{254289B9C09904AB}Prefabs/Vehicles/Wheeled/BRDM2/BRDM2.et"
+         m_aEntityDataList {
+          SCR_EntityCatalogEditorData "{62ACD28F65996D90}" {
+          }
+          SCR_EntityCatalogSpawnerData "{62ACD28F7AF65916}" {
+           m_eSlotTypes VEHICLE_MEDIUM
+          }
+         }
+        }
+        SCR_EntityCatalogEntry "{63229A274340C655}" {
+         m_sEntityPrefab "{F7B9B434FCFF00B3}Prefabs/Vehicles/Wheeled/Conflict_Variants/BRDM2_Conflict.et"
+         m_aEntityDataList {
+          SCR_EntityCatalogEditorData "{63229A274340C6CC}" {
+           m_eValidEditorModes BUILDING
+          }
+          SCR_EntityCatalogSpawnerData "{63229A274340C6CF}" {
+           m_eSlotTypes VEHICLE_MEDIUM
+          }
+         }
+        }
+        SCR_EntityCatalogEntry "{652959ACC8E57669}" {
+         m_sEntityPrefab "{F203E2146C425605}Prefabs/Vehicles/Wheeled/Ural4320/Ural4320_ZU23_camo.et"
+         m_aEntityDataList {
+          SCR_EntityCatalogEditorData "{6052F486B876CAA9}" {
+           m_eValidEditorModes 33
+          }
+          SCR_EntityCatalogSpawnerData "{5D247327EB37936D}" {
+           m_eSlotTypes VEHICLE_MEDIUM
+          }
+         }
+        }
+        SCR_EntityCatalogEntry "{62505A80ECD90165}" {
+         m_sEntityPrefab "{9A1A271F96081425}Prefabs/Vehicles/Wheeled/Motorbike/Motorbike_USSR.et"
+        }
+        SCR_EntityCatalogEntry "{6504D46554575AFB}" {
+         m_sEntityPrefab "{E504DEC0AC04AE28}Prefabs/Vehicles/Tracked/BMP-2M Barezhok.et"
+         m_aEntityDataList {
+          SCR_EntityCatalogEditorData "{6504D46554575B5D}" {
+           m_eValidEditorModes 33
+          }
+          SCR_EntityCatalogSpawnerData "{6504D46554575B5A}" {
+           m_eSlotTypes VEHICLE_MEDIUM
+          }
+         }
+        }
+        SCR_EntityCatalogEntry "{61F2A73ACEEB9476}" {
+         m_sEntityPrefab "{1BE270891F0F3772}Prefabs/Vehicles/Tracked/BMP3/BMP3_Tank.et"
+         m_aEntityDataList {
+          SCR_EntityCatalogEditorData "{61F2A73AFEC53765}" {
+           m_eValidEditorModes 33
+          }
+          SCR_EntityCatalogSpawnerData "{61F2A73AF927DB16}" {
+           m_eSlotTypes VEHICLE_MEDIUM
+          }
+         }
+        }
+        SCR_EntityCatalogEntry "{65F880B9DDF79796}" {
+         m_sEntityPrefab "{944D59BF5EC046D6}Prefabs/Vehicles/Wheeled/K17/APC_K17_Berezok_tan.et"
+         m_aEntityDataList {
+          SCR_EntityCatalogEditorData "{65F880B926A32273}" {
+           m_eValidEditorModes 33
+          }
+          SCR_EntityCatalogSpawnerData "{65F880B92021006A}" {
+           m_eSlotTypes VEHICLE_MEDIUM
+          }
+         }
+        }
+        SCR_EntityCatalogEntry "{65F8FE6471338340}" {
+         m_sEntityPrefab "{93953D1ABAEE7D85}Prefabs/Vehicles/Wheeled/K4386/K4386_Tan.et"
+         m_aEntityDataList {
+          SCR_EntityCatalogEditorData "{65F8FE6471339CF8}" {
+           m_eValidEditorModes 33
+          }
+          SCR_EntityCatalogSpawnerData "{65F8FE6471339CF7}" {
+           m_eSlotTypes VEHICLE_MEDIUM
+          }
+         }
+        }
+        SCR_EntityCatalogEntry "{65F8FE64425103E9}" {
+         m_sEntityPrefab "{E836092AB606CE4A}Prefabs/Vehicles/Wheeled/K4386/K4386_Armed_Tan.et"
+         m_aEntityDataList {
+          SCR_EntityCatalogEditorData "{65F8FE6471339CF8}" {
+           m_eValidEditorModes 33
+          }
+          SCR_EntityCatalogSpawnerData "{65F8FE6471339CF7}" {
+           m_eSlotTypes VEHICLE_MEDIUM
           }
          }
         }
        }
       }
-      SCR_EntityCatalogMultiListEntry "{61AE911F3D939405}" {
+      SCR_EntityCatalogMultiListEntry "{605697836CAAD3A0}" {
        m_aEntities {
-        SCR_EntityCatalogEntry "{65F13B3CD7622CE4}" {
-         m_sEntityPrefab "{218E9B68B4CA1BDA}Prefabs/Characters/Uniforms/Crye_Pants/crye_pants_GreekLizard.et"
+        SCR_EntityCatalogEntry "{5D2348264A1BDEA3}" {
+         m_sEntityPrefab "{DF5CCB7C0FF049F4}Prefabs/Vehicles/Helicopters/Mi8MT/Mi8MT.et"
          m_aEntityDataList {
-          SCR_ArsenalItem "{65F13B3CD38F42F2}" {
-           m_eItemType LEGS
+          SCR_EntityCatalogEditorData "{6052F4868FC0DBF7}" {
+           m_eValidEditorModes 33
+          }
+          SCR_EntityCatalogSpawnerData "{5D247327FCE7D609}" {
+           m_eSlotTypes VEHICLE_LARGE
+          }
+         }
+        }
+        SCR_EntityCatalogEntry "{60C3186F9AF00BEA}" {
+         m_sEntityPrefab "{7BD282AF716ED639}Prefabs/Vehicles/Helicopters/Mi8MT/Mi8MT_armed.et"
+         m_aEntityDataList {
+          SCR_EntityCatalogEditorData "{60C3186FA8C9B9EC}" {
+           m_eValidEditorModes 33
+          }
+          SCR_EntityCatalogSpawnerData "{60C3186FACCBE095}" {
+           m_eSlotTypes VEHICLE_LARGE
+          }
+         }
+        }
+        SCR_EntityCatalogEntry "{627C9145E4844787}" {
+         m_sEntityPrefab "{3C6B3ED0C3AC30D5}Prefabs/Vehicles/Helicopters/Mi8MT/Mi8MT_armed_gunship_HE.et"
+         m_aEntityDataList {
+          SCR_EntityCatalogEditorData "{627C9145E4844733}" {
+           m_eValidEditorModes 33
+          }
+          SCR_EntityCatalogSpawnerData "{627C9145E484470B}" {
+           m_eSlotTypes VEHICLE_LARGE
+          }
+         }
+        }
+        SCR_EntityCatalogEntry "{62B10747441A3F3D}" {
+         m_sEntityPrefab "{DBEC63C9DEE4358C}Prefabs/Vehicles/Helicopters/Mi8MT/Mi8MT_armed_gunship_HEDP.et"
+         m_aEntityDataList {
+          SCR_EntityCatalogEditorData "{62B10747441A3F80}" {
+           m_eValidEditorModes 33
+          }
+          SCR_EntityCatalogSpawnerData "{62B10747441A3F87}" {
+           m_eSlotTypes VEHICLE_LARGE
+          }
+         }
+        }
+        SCR_EntityCatalogEntry "{630A1A7A6544E0A2}" {
+         m_sEntityPrefab "{62A9D6C4ABD7BFC9}Prefabs/Vehicles/Helicopters/Mi8MT/Mi8MT_armed_rockets.et"
+         m_aEntityDataList {
+          SCR_EntityCatalogEditorData "{60C3186FA8C9B9EC}" {
+           m_eValidEditorModes 33
+          }
+          SCR_EntityCatalogSpawnerData "{60C3186FACCBE095}" {
+           m_eSlotTypes VEHICLE_LARGE
+          }
+         }
+        }
+        SCR_EntityCatalogEntry "{630A1A7A6A65CB50}" {
+         m_sEntityPrefab "{55B4044D7422667E}Prefabs/Vehicles/Helicopters/Mi8MT/Mi8MT_armed_upk23.et"
+         m_aEntityDataList {
+          SCR_EntityCatalogEditorData "{60C3186FA8C9B9EC}" {
+           m_eValidEditorModes 33
+          }
+          SCR_EntityCatalogSpawnerData "{60C3186FACCBE095}" {
+           m_eSlotTypes VEHICLE_LARGE
+          }
+         }
+        }
+        SCR_EntityCatalogEntry "{630A1A7A55D78C44}" {
+         m_sEntityPrefab "{6FFBFBC0EF06333D}Prefabs/Vehicles/Helicopters/Mi8MT/Mi8MT_armed_fab250.et"
+         m_aEntityDataList {
+          SCR_EntityCatalogEditorData "{60C3186FA8C9B9EC}" {
+           m_eValidEditorModes 33
+          }
+          SCR_EntityCatalogSpawnerData "{60C3186FACCBE095}" {
+           m_eSlotTypes VEHICLE_LARGE
+          }
+         }
+        }
+        SCR_EntityCatalogEntry "{64E43175664DD1F8}" {
+         m_aEntityDataList {
+          SCR_EntityCatalogEditorData "{60C3186FA8C9B9EC}" {
+           m_eValidEditorModes 33
+          }
+          SCR_EntityCatalogSpawnerData "{60C3186FACCBE095}" {
+           m_eSlotTypes VEHICLE_LARGE
+          }
+         }
+        }
+        SCR_EntityCatalogEntry "{65112E91DBB039ED}" {
+         m_aEntityDataList {
+          SCR_EntityCatalogEditorData "{65112E91DBB03977}" {
+           m_eValidEditorModes 33
+          }
+          SCR_EntityCatalogSpawnerData "{65112E91DBB03974}" {
+           m_eSlotTypes VEHICLE_LARGE
+          }
+         }
+        }
+        SCR_EntityCatalogEntry "{632B3EACFD0810FD}" {
+         m_sEntityPrefab "{F889C67BFCAD2CF7}Prefabs/Vehicles/Helicopters/Mi24/Mi24V_transport.et"
+         m_aEntityDataList {
+          SCR_EntityCatalogEditorData "{6052F4868FC0DBF7}" {
+           m_eValidEditorModes 33
+          }
+          SCR_EntityCatalogSpawnerData "{5D247327FCE7D609}" {
+           m_eSlotTypes VEHICLE_LARGE
+          }
+         }
+        }
+        SCR_EntityCatalogEntry "{64C4D4817CBB9AC2}" {
+         m_sEntityPrefab "{9F4841C20C2F4F12}Prefabs/Vehicles/Helicopters/Mi24/Mi24V_supply.et"
+         m_aEntityDataList {
+          SCR_EntityCatalogEditorData "{64C4D4817CBB9A7A}" {
+           m_eValidEditorModes 33
+          }
+          SCR_EntityCatalogSpawnerData "{64C4D4817CBB9A7D}" {
+           m_eSlotTypes VEHICLE_LARGE
+          }
+         }
+        }
+        SCR_EntityCatalogEntry "{632B3EACF11E361A}" {
+         m_sEntityPrefab "{7FF511EDC4034D9F}Prefabs/Vehicles/Helicopters/Mi24/Mi24V_armed_S5.et"
+         m_aEntityDataList {
+          SCR_EntityCatalogEditorData "{6052F4868FC0DBF7}" {
+           m_eValidEditorModes 33
+          }
+          SCR_EntityCatalogSpawnerData "{5D247327FCE7D609}" {
+           m_eSlotTypes VEHICLE_LARGE
+          }
+         }
+        }
+        SCR_EntityCatalogEntry "{6290B1E81BF6BF0C}" {
+         m_sEntityPrefab "{9AA441DE6DAB6D94}Prefabs/Vehicles/Helicopters/Mi24/Mi24V_armed_S8.et"
+         m_aEntityDataList {
+          SCR_EntityCatalogEditorData "{6052F4868FC0DBF7}" {
+           m_eValidEditorModes 33
+          }
+          SCR_EntityCatalogSpawnerData "{5D247327FCE7D609}" {
+           m_eSlotTypes VEHICLE_LARGE
+          }
+         }
+        }
+        SCR_EntityCatalogEntry "{62A713CDB68EAF33}" {
+         m_sEntityPrefab "{658B80A790C7EFA7}Prefabs/Vehicles/Helicopters/Mi24/Mi24V_armed_9M114.et"
+         m_aEntityDataList {
+          SCR_EntityCatalogEditorData "{6052F4868FC0DBF7}" {
+           m_eValidEditorModes 33
+          }
+          SCR_EntityCatalogSpawnerData "{5D247327FCE7D609}" {
+           m_eSlotTypes VEHICLE_LARGE
+          }
+         }
+        }
+        SCR_EntityCatalogEntry "{62A713CDB22C1B65}" {
+         m_sEntityPrefab "{65ED07118C75B32F}Prefabs/Vehicles/Helicopters/Mi24/Mi24V_armed_UPK23.et"
+         m_aEntityDataList {
+          SCR_EntityCatalogEditorData "{6052F4868FC0DBF7}" {
+           m_eValidEditorModes 33
+          }
+          SCR_EntityCatalogSpawnerData "{5D247327FCE7D609}" {
+           m_eSlotTypes VEHICLE_LARGE
+          }
+         }
+        }
+        SCR_EntityCatalogEntry "{62A713CDA075B00E}" {
+         m_sEntityPrefab "{9CBF2E3809F1EC0C}Prefabs/Vehicles/Helicopters/Mi24/Mi24V_armed_FAB250.et"
+         m_aEntityDataList {
+          SCR_EntityCatalogEditorData "{6052F4868FC0DBF7}" {
+           m_eValidEditorModes 33
+          }
+          SCR_EntityCatalogSpawnerData "{5D247327FCE7D609}" {
+           m_eSlotTypes VEHICLE_LARGE
+          }
+         }
+        }
+        SCR_EntityCatalogEntry "{632ABC7B9E232C32}" {
+         m_sEntityPrefab "{2FA364D8E326CB3C}Prefabs/Vehicles/Helicopters/Mi24/Mi24P_armed_9M114.et"
+         m_aEntityDataList {
+          SCR_EntityCatalogEditorData "{632ABC7B9E232FDE}" {
+           m_eValidEditorModes 33
+          }
+          SCR_EntityCatalogSpawnerData "{632ABC7B9E232FD1}" {
+           m_eSlotTypes VEHICLE_LARGE
+          }
+         }
+        }
+        SCR_EntityCatalogEntry "{64DCBC566234FCAE}" {
+         m_sEntityPrefab "{3DD336DB69DCD4AC}Prefabs/Vehicles/Helicopters/Mi24/Mi24P_armed_R60.et"
+         m_aEntityDataList {
+          SCR_EntityCatalogEditorData "{64DCBC566234FC25}" {
+           m_eValidEditorModes 33
+          }
+          SCR_EntityCatalogSpawnerData "{64DCBC566234FC5F}" {
+           m_eSlotTypes VEHICLE_LARGE
+          }
+         }
+        }
+        SCR_EntityCatalogEntry "{61C48CF0AC432976}" {
+         m_sEntityPrefab "{0AAE63ECD96BC484}Prefabs/Vehicles/Helicopters/Mi8MT/Mi8MT_supply.et"
+         m_aEntityDataList {
+          SCR_EntityCatalogEditorData "{6052F4868FC0DBF7}" {
+           m_eValidEditorModes 33
+          }
+          SCR_EntityCatalogSpawnerData "{5D247327FCE7D609}" {
+           m_eSlotTypes VEHICLE_LARGE
+          }
+         }
+        }
+        SCR_EntityCatalogEntry "{65F8FE64D05A12D9}" {
+         m_sEntityPrefab "{6A0046A3585A0AA3}Prefabs/Vehicles/Helicopters/AH6M/AH6M_RU_base.et"
+         m_aEntityDataList {
+          SCR_EntityCatalogEditorData "{65F8FE64D059CAB4}" {
+           m_eValidEditorModes 33
+          }
+          SCR_EntityCatalogSpawnerData "{65F8FE64D059CAB0}" {
+           m_eSlotTypes VEHICLE_LARGE
+          }
+         }
+        }
+        SCR_EntityCatalogEntry "{65F8FE64DF257A5A}" {
+         m_sEntityPrefab "{168BD45FE3C8EAF0}Prefabs/Vehicles/Helicopters/AH6M/AH6M_RKTO_RU.et"
+         m_aEntityDataList {
+          SCR_EntityCatalogEditorData "{65F8FE64DF257B92}" {
+           m_eValidEditorModes 33
+          }
+          SCR_EntityCatalogSpawnerData "{65F8FE64DF257B91}" {
+           m_eSlotTypes VEHICLE_LARGE
+          }
+         }
+        }
+        SCR_EntityCatalogEntry "{65F8FE64DE63320B}" {
+         m_sEntityPrefab "{E95C3BEE2A723FA6}Prefabs/Vehicles/Helicopters/AH6M/AH6M_RKT_RU.et"
+         m_aEntityDataList {
+          SCR_EntityCatalogEditorData "{65F8FE64DE633242}" {
+           m_eValidEditorModes 33
+          }
+          SCR_EntityCatalogSpawnerData "{65F8FE64DE633241}" {
+           m_eSlotTypes VEHICLE_LARGE
+          }
+         }
+        }
+        SCR_EntityCatalogEntry "{65F8FE64DCE0E0EA}" {
+         m_sEntityPrefab "{75850C05FA72D603}Prefabs/Vehicles/Helicopters/AH6M/AH6M_M134_RU.et"
+         m_aEntityDataList {
+          SCR_EntityCatalogEditorData "{65F8FE64DCE0E024}" {
+           m_eValidEditorModes 33
+          }
+          SCR_EntityCatalogSpawnerData "{65F8FE64DCE0E01F}" {
+           m_eSlotTypes VEHICLE_LARGE
+          }
+         }
+        }
+        SCR_EntityCatalogEntry "{65F8FE642C1FB878}" {
+         m_sEntityPrefab "{E949A02F8CF69B31}Prefabs/Vehicles/Helicopters/AH6M/AH6M_GAU19_RU.et"
+         m_aEntityDataList {
+          SCR_EntityCatalogEditorData "{65F8FE642C1FB9AB}" {
+           m_eValidEditorModes 33
+          }
+          SCR_EntityCatalogSpawnerData "{65F8FE642C1FB9A6}" {
+           m_eSlotTypes VEHICLE_LARGE
+          }
+         }
+        }
+        SCR_EntityCatalogEntry "{65F8FE642B0123EE}" {
+         m_sEntityPrefab "{35E37D88A0C5BD70}Prefabs/Vehicles/Helicopters/AH6M/AH6M_ATGMx2_RU.et"
+         m_aEntityDataList {
+          SCR_EntityCatalogEditorData "{65F8FE642B01232B}" {
+           m_eValidEditorModes 33
+          }
+          SCR_EntityCatalogSpawnerData "{65F8FE642B012322}" {
+           m_eSlotTypes VEHICLE_LARGE
+          }
+         }
+        }
+        SCR_EntityCatalogEntry "{65F8FE642A278843}" {
+         m_sEntityPrefab "{3F462DC516D54EF7}Prefabs/Vehicles/Helicopters/AH6M/AH6M_ATGMx1_RU.et"
+         m_aEntityDataList {
+          SCR_EntityCatalogEditorData "{65F8FE642A2789FC}" {
+           m_eValidEditorModes 33
+          }
+          SCR_EntityCatalogSpawnerData "{65F8FE642A2789FB}" {
+           m_eSlotTypes VEHICLE_LARGE
+          }
+         }
+        }
+        SCR_EntityCatalogEntry "{65F8FE643C3D3FB2}" {
+         m_sEntityPrefab "{6C2D0F4DC3F4DB4F}Prefabs/Vehicles/Helicopters/AH6M/AH6M_Armed_RU_base.et"
+         m_aEntityDataList {
+          SCR_EntityCatalogEditorData "{65F8FE643C3D3FC4}" {
+           m_eValidEditorModes 33
+          }
+          SCR_EntityCatalogSpawnerData "{65F8FE643C3D3FC2}" {
+           m_eSlotTypes VEHICLE_LARGE
+          }
+         }
+        }
+        SCR_EntityCatalogEntry "{65F8FE643A9BCB0E}" {
+         m_sEntityPrefab "{571B41C4408F8548}Prefabs/Vehicles/Helicopters/AH6M/AH6M_AIM92x2_RU.et"
+         m_aEntityDataList {
+          SCR_EntityCatalogEditorData "{65F8FE643A9BCB45}" {
+           m_eValidEditorModes 33
+          }
+          SCR_EntityCatalogSpawnerData "{65F8FE643A9BCB40}" {
+           m_eSlotTypes VEHICLE_LARGE
+          }
+         }
+        }
+        SCR_EntityCatalogEntry "{65F8FE643B4C3CA5}" {
+         m_sEntityPrefab "{5DBE1189F69F76CF}Prefabs/Vehicles/Helicopters/AH6M/AH6M_AIM92x1_RU.et"
+         m_aEntityDataList {
+          SCR_EntityCatalogEditorData "{65F8FE643B4C3CDE}" {
+           m_eValidEditorModes 33
+          }
+          SCR_EntityCatalogSpawnerData "{65F8FE643B4C3CCF}" {
+           m_eSlotTypes VEHICLE_LARGE
+          }
+         }
+        }
+       }
+      }
+      SCR_EntityCatalogMultiListEntry "{6332842BAADDFF9B}" {
+       m_sIdentifier "Gaz_Tigrs"
+       m_aEntities {
+        SCR_EntityCatalogEntry "{6332842BA4524199}" {
+         m_sEntityPrefab "{2C9B4D8196812513}Prefabs/Vehicles/Wheeled/TIGR/Unarmed/GAZ_TIGR_v2_Unarmed.et"
+         m_aEntityDataList {
+          SCR_EntityCatalogEditorData "{6052F486C1803290}" {
+           m_eValidEditorModes 33
+          }
+          SCR_EntityCatalogSpawnerData "{5D247326389CD3ED}" {
+           m_eSlotTypes 24
+          }
+         }
+        }
+        SCR_EntityCatalogEntry "{6332842BDBBA1645}" {
+         m_sEntityPrefab "{6F4D5B56F4905A62}Prefabs/Vehicles/Wheeled/TIGR/Unarmed/GAZ_TIGR_v2_Unarmed_Green.et"
+         m_aEntityDataList {
+          SCR_EntityCatalogEditorData "{6332842BDBBA162B}" {
+           m_eValidEditorModes 33
+          }
+          SCR_EntityCatalogSpawnerData "{6332842BDBBA162E}" {
+           m_eSlotTypes 24
+          }
+         }
+        }
+        SCR_EntityCatalogEntry "{6332842BDA3BA466}" {
+         m_sEntityPrefab "{7BC76F92B882889D}Prefabs/Vehicles/Wheeled/TIGR/PKP/GAZ_TIGR_v2_PKM.et"
+         m_aEntityDataList {
+          SCR_EntityCatalogEditorData "{6332842BDA3BA7C2}" {
+           m_eValidEditorModes 33
+          }
+          SCR_EntityCatalogSpawnerData "{6332842BDA3BA7C5}" {
+           m_eSlotTypes 24
+          }
+         }
+        }
+        SCR_EntityCatalogEntry "{6332842BD145740A}" {
+         m_sEntityPrefab "{6B7CD408BDFB94F5}Prefabs/Vehicles/Wheeled/TIGR/PKP/GAZ_TIGR_v2_PKM_Green.et"
+         m_aEntityDataList {
+          SCR_EntityCatalogEditorData "{6332842BD14577F1}" {
+           m_eValidEditorModes 33
+          }
+          SCR_EntityCatalogSpawnerData "{6332842BD14577F5}" {
+           m_eSlotTypes 24
+          }
+         }
+        }
+        SCR_EntityCatalogEntry "{6332842BD0B4085A}" {
+         m_sEntityPrefab "{7ACFD8FA081996F6}Prefabs/Vehicles/Wheeled/TIGR/PKP/GAZ_TIGR_v2_PKM_1p29.et"
+         m_aEntityDataList {
+          SCR_EntityCatalogEditorData "{6332842BD0B40807}" {
+           m_eValidEditorModes 33
+          }
+          SCR_EntityCatalogSpawnerData "{6332842BD0B4083B}" {
+           m_eSlotTypes 24
+          }
+         }
+        }
+        SCR_EntityCatalogEntry "{6332842BD00F8EF3}" {
+         m_sEntityPrefab "{8E7F7A0368CE8805}Prefabs/Vehicles/Wheeled/TIGR/PKP/GAZ_TIGR_v2_PKM_Green_1p29.et"
+         m_aEntityDataList {
+          SCR_EntityCatalogEditorData "{6332842BD00F8E5A}" {
+           m_eValidEditorModes 33
+          }
+          SCR_EntityCatalogSpawnerData "{6332842BD00F8E5D}" {
+           m_eSlotTypes 24
+          }
+         }
+        }
+        SCR_EntityCatalogEntry "{6590881F33705215}" {
+         m_sEntityPrefab "{2297AAC5FB2CF134}Prefabs/Vehicles/Wheeled/TIGR/PKP/GAZ_TIGR_v2_PKM_Shield.et"
+         m_aEntityDataList {
+          SCR_EntityCatalogEditorData "{6590881F337055FF}" {
+           m_eValidEditorModes 33
+          }
+          SCR_EntityCatalogSpawnerData "{6590881F337055F2}" {
+           m_eSlotTypes 24
+          }
+         }
+        }
+        SCR_EntityCatalogEntry "{6590881F364A31E7}" {
+         m_sEntityPrefab "{EC05945314964268}Prefabs/Vehicles/Wheeled/TIGR/PKP/GAZ_TIGR_v2_PKM_Green_Shield.et"
+         m_aEntityDataList {
+          SCR_EntityCatalogEditorData "{6590881F364A3141}" {
+           m_eValidEditorModes 33
+          }
+          SCR_EntityCatalogSpawnerData "{6590881F364A3144}" {
+           m_eSlotTypes 24
+          }
+         }
+        }
+        SCR_EntityCatalogEntry "{6590881F28FEAC3A}" {
+         m_sEntityPrefab "{3290D38BD0CEBF94}Prefabs/Vehicles/Wheeled/TIGR/PKP/GAZ_TIGR_v2_PKM_1p29_Shield.et"
+         m_aEntityDataList {
+          SCR_EntityCatalogEditorData "{6590881F28FEAF92}" {
+           m_eValidEditorModes 33
+          }
+          SCR_EntityCatalogSpawnerData "{6590881F28FEAF97}" {
+           m_eSlotTypes 24
+          }
+         }
+        }
+        SCR_EntityCatalogEntry "{6590881F2C366CD3}" {
+         m_sEntityPrefab "{BA3FE174E909A0D0}Prefabs/Vehicles/Wheeled/TIGR/PKP/GAZ_TIGR_v2_PKM_Green_1p29_Shield.et"
+         m_aEntityDataList {
+          SCR_EntityCatalogEditorData "{6590881F2C366CB4}" {
+           m_eValidEditorModes 33
+          }
+          SCR_EntityCatalogSpawnerData "{6590881F2C366CB7}" {
+           m_eSlotTypes 24
+          }
+         }
+        }
+        SCR_EntityCatalogEntry "{6332842BD1A61BCA}" {
+         m_sEntityPrefab "{AC12E5669B411D57}Prefabs/Vehicles/Wheeled/TIGR/KORD/GAZ_TIGR_v2_KORD.et"
+         m_aEntityDataList {
+          SCR_EntityCatalogEditorData "{6332842BD1A61BBC}" {
+           m_eValidEditorModes 33
+          }
+          SCR_EntityCatalogSpawnerData "{6332842BD1A61BBF}" {
+           m_eSlotTypes 24
+          }
+         }
+        }
+        SCR_EntityCatalogEntry "{6332842BD1DA2A08}" {
+         m_sEntityPrefab "{7A16FB788DAD3992}Prefabs/Vehicles/Wheeled/TIGR/KORD/GAZ_TIGR_v2_KORD_Green.et"
+         m_aEntityDataList {
+          SCR_EntityCatalogEditorData "{6332842BD1DA2DFB}" {
+           m_eValidEditorModes 33
+          }
+          SCR_EntityCatalogSpawnerData "{6332842BD1DA2DFD}" {
+           m_eSlotTypes 24
+          }
+         }
+        }
+        SCR_EntityCatalogEntry "{6332842BDAE986F6}" {
+         m_sEntityPrefab "{CD4737303AA14C6D}Prefabs/Vehicles/Wheeled/TIGR/KORD/GAZ_TIGR_v2_KORD_SPP.et"
+         m_aEntityDataList {
+          SCR_EntityCatalogEditorData "{6332842BDAE9867B}" {
+           m_eValidEditorModes 33
+          }
+          SCR_EntityCatalogSpawnerData "{6332842BDAE98672}" {
+           m_eSlotTypes 24
+          }
+         }
+        }
+        SCR_EntityCatalogEntry "{6332842BDCB2F5E6}" {
+         m_sEntityPrefab "{7B4BBFD80FB91FF0}Prefabs/Vehicles/Wheeled/TIGR/KORD/GAZ_TIGR_v2_KORD_SPP_Green.et"
+         m_aEntityDataList {
+          SCR_EntityCatalogEditorData "{6332842BDCB2F549}" {
+           m_eValidEditorModes 33
+          }
+          SCR_EntityCatalogSpawnerData "{6332842BDCB2F54D}" {
+           m_eSlotTypes 24
+          }
+         }
+        }
+        SCR_EntityCatalogEntry "{6332842BDFE9A291}" {
+         m_sEntityPrefab "{C759BD01F342125E}Prefabs/Vehicles/Wheeled/TIGR/KORD/GAZ_TIGR_v2_KORD_Shield.et"
+         m_aEntityDataList {
+          SCR_EntityCatalogEditorData "{6332842BDFE9A27C}" {
+           m_eValidEditorModes 33
+          }
+          SCR_EntityCatalogSpawnerData "{6332842BDFE9A27F}" {
+           m_eSlotTypes 24
+          }
+         }
+        }
+        SCR_EntityCatalogEntry "{6332842BDCD8CE17}" {
+         m_sEntityPrefab "{AC546547A5D75592}Prefabs/Vehicles/Wheeled/TIGR/KORD/GAZ_TIGR_v2_KORD_Green_Shield.et"
+         m_aEntityDataList {
+          SCR_EntityCatalogEditorData "{6332842BDCD8C1F8}" {
+           m_eValidEditorModes 33
+          }
+          SCR_EntityCatalogSpawnerData "{6332842BDCD8C1FB}" {
+           m_eSlotTypes 24
+          }
+         }
+        }
+        SCR_EntityCatalogEntry "{6332842BDD4AF581}" {
+         m_sEntityPrefab "{D8EDFC684E8E46CD}Prefabs/Vehicles/Wheeled/TIGR/KORD/GAZ_TIGR_v2_KORD_SPP_Shield.et"
+         m_aEntityDataList {
+          SCR_EntityCatalogEditorData "{6332842BDD4AF574}" {
+           m_eValidEditorModes 33
+          }
+          SCR_EntityCatalogSpawnerData "{6332842BDD4AF577}" {
+           m_eSlotTypes 24
+          }
+         }
+        }
+        SCR_EntityCatalogEntry "{6332842BDC695FD0}" {
+         m_sEntityPrefab "{75AF26C06F06CC55}Prefabs/Vehicles/Wheeled/TIGR/KORD/GAZ_TIGR_v2_KORD_SPP_Green_Shield.et"
+         m_aEntityDataList {
+          SCR_EntityCatalogEditorData "{6332842BDC695FB0}" {
+           m_eValidEditorModes 33
+          }
+          SCR_EntityCatalogSpawnerData "{6332842BDC695FB4}" {
+           m_eSlotTypes 24
+          }
+         }
+        }
+        SCR_EntityCatalogEntry "{6332842BDBCC51CD}" {
+         m_sEntityPrefab "{1C41EF46A9A977D0}Prefabs/Vehicles/Wheeled/TIGR/AGS/GAZ_TIGR_v2_AGS17.et"
+         m_aEntityDataList {
+          SCR_EntityCatalogEditorData "{6332842BDBCC51B5}" {
+           m_eValidEditorModes 33
+          }
+          SCR_EntityCatalogSpawnerData "{6332842BDBCC51AC}" {
+           m_eSlotTypes 24
+          }
+         }
+        }
+        SCR_EntityCatalogEntry "{6332842BDB71803E}" {
+         m_sEntityPrefab "{D020BC575A623CE7}Prefabs/Vehicles/Wheeled/TIGR/AGS/GAZ_TIGR_v2_AGS17_Green.et"
+         m_aEntityDataList {
+          SCR_EntityCatalogEditorData "{6332842BDB7183E3}" {
+           m_eValidEditorModes 33
+          }
+          SCR_EntityCatalogSpawnerData "{6332842BDB7183E5}" {
+           m_eSlotTypes 24
+          }
+         }
+        }
+        SCR_EntityCatalogEntry "{6332842BD86C063C}" {
+         m_sEntityPrefab "{DC1989B42FE7ACD5}Prefabs/Vehicles/Wheeled/TIGR/AGS/GAZ_TIGR_v2_AGS17_Shield.et"
+         m_aEntityDataList {
+          SCR_EntityCatalogEditorData "{6332842BD86C39E5}" {
+           m_eValidEditorModes 33
+          }
+          SCR_EntityCatalogSpawnerData "{6332842BD86C3998}" {
+           m_eSlotTypes 24
+          }
+         }
+        }
+        SCR_EntityCatalogEntry "{6332842BD8E01F3D}" {
+         m_sEntityPrefab "{DF2574D5006E597E}Prefabs/Vehicles/Wheeled/TIGR/AGS/GAZ_TIGR_v2_AGS17_Green_Shield.et"
+         m_aEntityDataList {
+          SCR_EntityCatalogEditorData "{6332842BD8E01EE7}" {
+           m_eValidEditorModes 33
+          }
+          SCR_EntityCatalogSpawnerData "{6332842BD8E01E9A}" {
+           m_eSlotTypes 24
+          }
+         }
+        }
+        SCR_EntityCatalogEntry "{6332842BD994DEC6}" {
+         m_sEntityPrefab "{73DF5D061E8AF526}Prefabs/Vehicles/Wheeled/TIGR/ArbaletDM/GAZ_TIGR_v2_Arbalet_PKM.et"
+         m_aEntityDataList {
+          SCR_EntityCatalogEditorData "{6332842BD994DEA9}" {
+           m_eValidEditorModes 33
+          }
+          SCR_EntityCatalogSpawnerData "{6332842BD994DEAB}" {
+           m_eSlotTypes 24
+          }
+         }
+        }
+        SCR_EntityCatalogEntry "{6332842BD95A2595}" {
+         m_sEntityPrefab "{E1288C24A903F64B}Prefabs/Vehicles/Wheeled/TIGR/ArbaletDM/GAZ_TIGR_v2_Arbalet_PKM_Green.et"
+         m_aEntityDataList {
+          SCR_EntityCatalogEditorData "{6332842BD95A2502}" {
+           m_eValidEditorModes 33
+          }
+          SCR_EntityCatalogSpawnerData "{6332842BD95A2505}" {
+           m_eSlotTypes 24
+          }
+         }
+        }
+        SCR_EntityCatalogEntry "{6332842B173B71D5}" {
+         m_sEntityPrefab "{7A21F47E09038E58}Prefabs/Vehicles/Wheeled/TIGR/ArbaletDM/GAZ_TIGR_v2_Arbalet_KORD.et"
+         m_aEntityDataList {
+          SCR_EntityCatalogEditorData "{6332842B173B71B0}" {
+           m_eValidEditorModes 33
+          }
+          SCR_EntityCatalogSpawnerData "{6332842B173B71B5}" {
+           m_eSlotTypes 24
+          }
+         }
+        }
+        SCR_EntityCatalogEntry "{6332842B14B6A14B}" {
+         m_sEntityPrefab "{95A220DF8D6E2543}Prefabs/Vehicles/Wheeled/TIGR/ArbaletDM/GAZ_TIGR_v2_Arbalet_KORD_Green.et"
+         m_aEntityDataList {
+          SCR_EntityCatalogEditorData "{6332842B14B6A12F}" {
+           m_eValidEditorModes 33
+          }
+          SCR_EntityCatalogSpawnerData "{6332842B14B6A122}" {
+           m_eSlotTypes 24
+          }
+         }
+        }
+        SCR_EntityCatalogEntry "{6332842B1412DF31}" {
+         m_sEntityPrefab "{D51AB4656FBC63D6}Prefabs/Vehicles/Wheeled/TIGR/ArbaletDM/GAZ_TIGR_v2_Arbalet_AP23.et"
+         m_aEntityDataList {
+          SCR_EntityCatalogEditorData "{6332842B1412DE9C}" {
+           m_eValidEditorModes 33
+          }
+          SCR_EntityCatalogSpawnerData "{6332842B1412DE9F}" {
+           m_eSlotTypes 24
+          }
+         }
+        }
+        SCR_EntityCatalogEntry "{6332842B15F28B18}" {
+         m_sEntityPrefab "{4D40E5A47A13CB10}Prefabs/Vehicles/Wheeled/TIGR/ArbaletDM/GAZ_TIGR_v2_Arbalet_AP23_Green.et"
+         m_aEntityDataList {
+          SCR_EntityCatalogEditorData "{6332842B15F28AC1}" {
+           m_eValidEditorModes 33
+          }
+          SCR_EntityCatalogSpawnerData "{6332842B15F28AC4}" {
+           m_eSlotTypes 24
+          }
+         }
+        }
+        SCR_EntityCatalogEntry "{64443E78CC8F2E04}" {
+         m_sEntityPrefab "{72B04EE13FEE6E67}Prefabs/Vehicles/Wheeled/TIGR/ATGM/Gaz_ABSh-233116_Kornet-D.et"
+         m_bEnabled 0
+         m_aEntityDataList {
+          SCR_EntityCatalogEditorData "{6332842B15F28AC1}" {
+           m_eValidEditorModes 33
+          }
+          SCR_EntityCatalogSpawnerData "{6332842B15F28AC4}" {
+           m_eSlotTypes 24
+          }
+         }
+        }
+        SCR_EntityCatalogEntry "{64443E78C3300086}" {
+         m_sEntityPrefab "{D03147DD55121B47}Prefabs/Vehicles/Wheeled/TIGR/ATGM/Gaz_ABSh-233116_Kornet-D_Green.et"
+         m_bEnabled 0
+         m_aEntityDataList {
+          SCR_EntityCatalogEditorData "{64443E78C3300068}" {
+           m_eValidEditorModes 33
+          }
+          SCR_EntityCatalogSpawnerData "{64443E78C330006C}" {
+           m_eSlotTypes 24
+          }
+         }
+        }
+       }
+      }
+     }
+    }
+    SCR_EntityCatalogMultiList "{5C68A0E9B9AA3C2D}" : "{37D5B75AAC3E72EA}Configs/EntityCatalog/USSR/Groups_EntityCatalog_USSR.conf" {
+    }
+    SCR_EntityCatalog "{5C68A0E9A51460AB}" : "{DDF17C8C140BD1F2}Configs/EntityCatalog/USSR/WeaponTripod_EntityCatalog_USSR.conf" {
+    }
+    SCR_EntityCatalogMultiList "{5C68A0E9AFE1E631}" : "{AC11437A0841F0C1}Configs/EntityCatalog/USSR/WCS_InventoryItems_EntityCatalog_USSR.conf" {
+    }
+    SCR_EntityCatalog "{5C9EDDD378BA3298}" : "{B4CA6761AC935808}Configs/EntityCatalog/USSR/SupplyContainerItems_EntityCatalog_USSR.conf" {
+    }
+   }
+   m_aStartingVehicles {
+   }
+  }
+  SCR_CampaignFaction "{50B30C3ADB052C80}" : "{ADFDBDA163950168}Configs/Factions/US_Campaign.conf" {
+   m_aEntityCatalogs {
+    SCR_EntityCatalogMultiList "{5C9E82F29B327997}" : "{34B55AA789B622B5}Configs/EntityCatalog/USSR/Vehicles_EntityCatalog_US.conf" {
+     m_aMultiLists {
+      SCR_EntityCatalogMultiListEntry "{60569780DE4EE17A}" {
+      }
+      SCR_EntityCatalogMultiListEntry "{60569780DC27DDBC}" {
+       m_sIdentifier "Helicopters"
+       m_aEntities {
+        SCR_EntityCatalogEntry "{61C91402F600A683}" {
+         m_sEntityPrefab "{F3E52CC19597F06E}Prefabs/Vehicles/Helicopters/UH1H/UH1H_supply.et"
+         m_aEntityDataList {
+          SCR_EntityCatalogEditorData "{6052BB10BA6FF517}" {
+           m_eValidEditorModes 33
+          }
+          SCR_EntityCatalogSpawnerData "{5D2473213748C772}" {
+           m_eSlotTypes VEHICLE_LARGE
+          }
+         }
+        }
+        SCR_EntityCatalogEntry "{5D23482661E39833}" {
+         m_sEntityPrefab "{9A26547C6CB04A96}Prefabs/Vehicles/Helicopters/UH1H/Tan_UH1H.et"
+         m_aEntityDataList {
+          SCR_EntityCatalogEditorData "{6052BB10BA6FF517}" {
+           m_eValidEditorModes 33
+          }
+          SCR_EntityCatalogSpawnerData "{5D2473213748C772}" {
+           m_eSlotTypes VEHICLE_LARGE
+          }
+         }
+        }
+        SCR_EntityCatalogEntry "{60C3186FC18A1A22}" {
+         m_sEntityPrefab "{35F0BC0DA278CD7F}Prefabs/Vehicles/Helicopters/UH1H/Tan_UH1H_armed.et"
+         m_aEntityDataList {
+          SCR_EntityCatalogEditorData "{6052BB10BA6FF517}" {
+           m_eValidEditorModes 33
+          }
+          SCR_EntityCatalogSpawnerData "{5D2473213748C772}" {
+           m_eSlotTypes VEHICLE_LARGE
+          }
+         }
+        }
+        SCR_EntityCatalogEntry "{627C91450E3D412F}" {
+         m_sEntityPrefab "{F6AD5112448559B2}Prefabs/Vehicles/Helicopters/UH1H/Tan_UH1H_armed_gunship_HE.et"
+         m_aEntityDataList {
+          SCR_EntityCatalogEditorData "{627C91450E3D40CC}" {
+           m_eValidEditorModes 33
+          }
+          SCR_EntityCatalogSpawnerData "{627C91450E3D40C0}" {
+           m_eSlotTypes VEHICLE_LARGE
+          }
+         }
+        }
+        SCR_EntityCatalogEntry "{627C914502B929C7}" {
+         m_sEntityPrefab "{D3DB49C9253397AD}Prefabs/Vehicles/Helicopters/UH1H/Tan_UH1H_armed_gunship_HEDP.et"
+         m_aEntityDataList {
+          SCR_EntityCatalogEditorData "{627C914502B92995}" {
+           m_eValidEditorModes 33
+          }
+          SCR_EntityCatalogSpawnerData "{627C914502B92969}" {
+           m_eSlotTypes VEHICLE_LARGE
+          }
+         }
+        }
+        SCR_EntityCatalogEntry "{62710D9BD7AAF6E8}" {
+         m_sEntityPrefab "{AF950919C81D91B4}Prefabs/Vehicles/Helicopters/AH6M/MH6M.et"
+         m_aEntityDataList {
+          SCR_EntityCatalogEditorData "{6052BB10BA6FF517}" {
+           m_eValidEditorModes 33
+          }
+          SCR_EntityCatalogSpawnerData "{5D2473213748C772}" {
+           m_eSlotTypes VEHICLE_LARGE
+          }
+         }
+        }
+        SCR_EntityCatalogEntry "{647CCADD6BD1BE71}" {
+         m_sEntityPrefab "{EDFD2D4D40AAE666}Prefabs/Vehicles/Helicopters/AH6M/MH6M_Supply.et"
+         m_aEntityDataList {
+          SCR_EntityCatalogEditorData "{647CCADD6BD1BD3F}" {
+           m_eValidEditorModes 33
+          }
+          SCR_EntityCatalogSpawnerData "{647CCADD6BD1BD32}" {
+           m_eSlotTypes VEHICLE_LARGE
+          }
+         }
+        }
+        SCR_EntityCatalogEntry "{629EFC7206137383}" {
+         m_sEntityPrefab "{72C04A6EABC12143}Prefabs/Vehicles/Helicopters/AH6M/AH6M_M134.et"
+         m_aEntityDataList {
+          SCR_EntityCatalogEditorData "{6052BB10BA6FF517}" {
+           m_eValidEditorModes 33
+          }
+          SCR_EntityCatalogSpawnerData "{5D2473213748C772}" {
+           m_eSlotTypes VEHICLE_LARGE
+          }
+         }
+        }
+        SCR_EntityCatalogEntry "{629EFC720467968B}" {
+         m_sEntityPrefab "{FAA52C8EBB0EBCF7}Prefabs/Vehicles/Helicopters/AH6M/AH6M_RKTO.et"
+         m_aEntityDataList {
+          SCR_EntityCatalogEditorData "{6052BB10BA6FF517}" {
+           m_eValidEditorModes 33
+          }
+          SCR_EntityCatalogSpawnerData "{5D2473213748C772}" {
+           m_eSlotTypes VEHICLE_LARGE
+          }
+         }
+        }
+        SCR_EntityCatalogEntry "{629AC41623B6CAB9}" {
+         m_sEntityPrefab "{823CA4130CE90077}Prefabs/Vehicles/Helicopters/AH6M/AH6M_RKT.et"
+         m_aEntityDataList {
+          SCR_EntityCatalogEditorData "{6052BB10BA6FF517}" {
+           m_eValidEditorModes 33
+          }
+          SCR_EntityCatalogSpawnerData "{5D2473213748C772}" {
+           m_eSlotTypes VEHICLE_LARGE
+          }
+         }
+        }
+        SCR_EntityCatalogEntry "{62AEBE4EA5FBF967}" {
+         m_sEntityPrefab "{A317D959A4248173}Prefabs/Vehicles/Helicopters/AH6M/AH6M_GAU19.et"
+         m_aEntityDataList {
+          SCR_EntityCatalogEditorData "{6052BB10BA6FF517}" {
+           m_eValidEditorModes 33
+          }
+          SCR_EntityCatalogSpawnerData "{5D2473213748C772}" {
+           m_eSlotTypes VEHICLE_LARGE
+          }
+         }
+        }
+        SCR_EntityCatalogEntry "{62B3432B931CB167}" {
+         m_sEntityPrefab "{E23BB241D2645937}Prefabs/Vehicles/Helicopters/AH6M/AH6M_ATGMx1.et"
+         m_aEntityDataList {
+          SCR_EntityCatalogEditorData "{6052BB10BA6FF517}" {
+           m_eValidEditorModes 33
+          }
+          SCR_EntityCatalogSpawnerData "{5D2473213748C772}" {
+           m_eSlotTypes VEHICLE_LARGE
+          }
+         }
+        }
+        SCR_EntityCatalogEntry "{62B3432B994FD679}" {
+         m_sEntityPrefab "{6161681968CBF6E4}Prefabs/Vehicles/Helicopters/AH6M/AH6M_AIM92x1.et"
+         m_aEntityDataList {
+          SCR_EntityCatalogEditorData "{6052BB10BA6FF517}" {
+           m_eValidEditorModes 33
+          }
+          SCR_EntityCatalogSpawnerData "{5D2473213748C772}" {
+           m_eSlotTypes VEHICLE_LARGE
+          }
+         }
+        }
+        SCR_EntityCatalogEntry "{61B444DE6AA877C3}" {
+         m_sEntityPrefab "{C8C37964483452EA}Prefabs/Vehicles/Helicopters/AH1S/AH1S_Army.et"
+         m_aEntityDataList {
+          SCR_EntityCatalogEditorData "{6052BB10BA6FF517}" {
+           m_eValidEditorModes 33
+          }
+          SCR_EntityCatalogSpawnerData "{5D2473213748C772}" {
+           m_eSlotTypes VEHICLE_LARGE
+          }
+         }
+        }
+        SCR_EntityCatalogEntry "{64DF55EC5C579EDC}" {
+         m_sEntityPrefab "{0453402396485205}Prefabs/Vehicles/Helicopters/AH1S/AH1S_Army_M299.et"
+         m_aEntityDataList {
+          SCR_EntityCatalogEditorData "{6052BB10BA6FF517}" {
+           m_eValidEditorModes 33
+          }
+          SCR_EntityCatalogSpawnerData "{5D2473213748C772}" {
+           m_eSlotTypes VEHICLE_LARGE
+          }
+         }
+        }
+        SCR_EntityCatalogEntry "{64DF55EC5B4A567F}" {
+         m_sEntityPrefab "{840FE7B2A2F9F92F}Prefabs/Vehicles/Helicopters/AH1S/AH1S_Army_XM65.et"
+         m_aEntityDataList {
+          SCR_EntityCatalogEditorData "{6052BB10BA6FF517}" {
+           m_eValidEditorModes 33
+          }
+          SCR_EntityCatalogSpawnerData "{5D2473213748C772}" {
+           m_eSlotTypes VEHICLE_LARGE
+          }
+         }
+        }
+        SCR_EntityCatalogEntry "{64DF55EC5AE98D34}" {
+         m_sEntityPrefab "{685A81835A3E6BC0}Prefabs/Vehicles/Helicopters/AH1S/AH1S_Army_AIM9.et"
+         m_aEntityDataList {
+          SCR_EntityCatalogEditorData "{6052BB10BA6FF517}" {
+           m_eValidEditorModes 33
+          }
+          SCR_EntityCatalogSpawnerData "{5D2473213748C772}" {
+           m_eSlotTypes VEHICLE_LARGE
+          }
+         }
+        }
+        SCR_EntityCatalogEntry "{61B444DE54FB69E2}" {
+         m_sEntityPrefab "{3DAF183ED62F4AE7}Prefabs/Vehicles/Helicopters/AH1S/AH1S_Black.et"
+         m_aEntityDataList {
+          SCR_EntityCatalogEditorData "{6052BB10BA6FF517}" {
+           m_eValidEditorModes 33
+          }
+          SCR_EntityCatalogSpawnerData "{5D2473213748C772}" {
+           m_eSlotTypes VEHICLE_LARGE
+          }
+         }
+        }
+        SCR_EntityCatalogEntry "{62FC80C76DFDCC66}" {
+         m_sEntityPrefab "{4320310A77B174DA}Prefabs/Vehicles/Helicopters/AH1S/AH1S_Black_M299.et"
+         m_aEntityDataList {
+          SCR_EntityCatalogEditorData "{6052BB10BA6FF517}" {
+           m_eValidEditorModes 33
+          }
+          SCR_EntityCatalogSpawnerData "{5D2473213748C772}" {
+           m_eSlotTypes VEHICLE_LARGE
+          }
+         }
+        }
+        SCR_EntityCatalogEntry "{62FC81076B4960B9}" {
+         m_sEntityPrefab "{A7C13A3ADA1049A7}Prefabs/Vehicles/Helicopters/AH1S/AH1S_Black_XM65.et"
+         m_aEntityDataList {
+          SCR_EntityCatalogEditorData "{6052BB10BA6FF517}" {
+           m_eValidEditorModes 33
+          }
+          SCR_EntityCatalogSpawnerData "{5D2473213748C772}" {
+           m_eSlotTypes VEHICLE_LARGE
+          }
+         }
+        }
+        SCR_EntityCatalogEntry "{632636F540572091}" {
+         m_sEntityPrefab "{4BE0F3AE27C9FC2A}Prefabs/Vehicles/Helicopters/AH1S/AH1S_Black_AIM9.et"
+         m_aEntityDataList {
+          SCR_EntityCatalogEditorData "{6052BB10BA6FF517}" {
+           m_eValidEditorModes 33
+          }
+          SCR_EntityCatalogSpawnerData "{5D2473213748C772}" {
+           m_eSlotTypes VEHICLE_LARGE
+          }
+         }
+        }
+        SCR_EntityCatalogEntry "{632636F53CBD1468}" {
+         m_sEntityPrefab "{BB59AEDD187EAEB5}Prefabs/Vehicles/Helicopters/AH64D/AH64D_Base.et"
+         m_aEntityDataList {
+          SCR_EntityCatalogEditorData "{6052BB10BA6FF517}" {
+           m_eValidEditorModes 33
+          }
+          SCR_EntityCatalogSpawnerData "{5D2473213748C772}" {
+           m_eSlotTypes VEHICLE_LARGE
+          }
+         }
+        }
+        SCR_EntityCatalogEntry "{632636F52D899861}" {
+         m_sEntityPrefab "{397971C2026D588F}Prefabs/Vehicles/Helicopters/AH64D/AH64D_AGM114L_X2.et"
+         m_aEntityDataList {
+          SCR_EntityCatalogEditorData "{6052BB10BA6FF517}" {
+           m_eValidEditorModes 33
+          }
+          SCR_EntityCatalogSpawnerData "{5D2473213748C772}" {
+           m_eSlotTypes VEHICLE_LARGE
+          }
+         }
+        }
+        SCR_EntityCatalogEntry "{64DB2ED33021C4E7}" {
+         m_sEntityPrefab "{F38B0D1637736312}Prefabs/Vehicles/Helicopters/AH64D/AH64D_AGM65_X2.et"
+         m_aEntityDataList {
+          SCR_EntityCatalogEditorData "{64DB2ED33021CB9E}" {
+           m_eValidEditorModes 33
+          }
+          SCR_EntityCatalogSpawnerData "{64DB2ED33021CB91}" {
+           m_eSlotTypes VEHICLE_LARGE
+          }
+         }
+        }
+        SCR_EntityCatalogEntry "{64DB2ED331B43158}" {
+         m_sEntityPrefab "{2B2364D74EFA7D4E}Prefabs/Vehicles/Helicopters/AH64D/AH64D_AGM65_X4.et"
+         m_aEntityDataList {
+          SCR_EntityCatalogEditorData "{64DB2ED331B430A8}" {
+           m_eValidEditorModes 33
+          }
+          SCR_EntityCatalogSpawnerData "{64DB2ED331B430AC}" {
+           m_eSlotTypes VEHICLE_LARGE
           }
          }
         }
@@ -101,49 +1474,9 @@ SCR_CampaignFactionManager CampaignFactionManager : "{F1AC26310BAE3788}Prefabs/M
    m_aStartingVehicles {
    }
   }
-  SCR_CampaignFaction "{56F0C3A6336375DC}" {
-   m_bShowInWelcomeScreenIfNonPlayable 0
+  SCR_CampaignFaction "{56F0C3A6336375DC}" : "{855DFBC3B34CCDBB}Prefabs/MP/Campaign/MEI_CampaignFaction.conf" {
   }
-  SCR_Faction "{60DCF47AEF40BD72}" : "{3FA20B01D950D31F}Configs/Factions/CIV.conf" {
-  }
-  SCR_Faction "{65F13B32C60F4E99}" : "{830970F42196ADAF}Configs/Factions/MEI.conf" {
-   m_aEntityCatalogs {
-    SCR_EntityCatalogMultiList "{5C68A0EAB887A0C4}" {
-     m_aMultiLists {
-      SCR_EntityCatalogMultiListEntry "{6583450A200B0899}" {
-       m_aEntities {
-        SCR_EntityCatalogEntry "{6583450A200B2C99}" {
-         m_sEntityPrefab "{BE77E238E4F92A28}Prefabs/Groups/MEI/AmbientPatrols/Group_MEI_RifleSquad_NotSpawned.et"
-        }
-        SCR_EntityCatalogEntry "{6583450A200B2C9D}" {
-         m_sEntityPrefab "{BE77E238E4F92A28}Prefabs/Groups/MEI/AmbientPatrols/Group_MEI_RifleSquad_NotSpawned.et"
-        }
-        SCR_EntityCatalogEntry "{6583450A200B2C80}" {
-         m_sEntityPrefab "{BE77E238E4F92A28}Prefabs/Groups/MEI/AmbientPatrols/Group_MEI_RifleSquad_NotSpawned.et"
-        }
-        SCR_EntityCatalogEntry "{6583450A200B2C87}" {
-         m_sEntityPrefab "{BE77E238E4F92A28}Prefabs/Groups/MEI/AmbientPatrols/Group_MEI_RifleSquad_NotSpawned.et"
-        }
-        SCR_EntityCatalogEntry "{6583450A200B6ACE}" {
-         m_sEntityPrefab "{BE77E238E4F92A28}Prefabs/Groups/MEI/AmbientPatrols/Group_MEI_RifleSquad_NotSpawned.et"
-        }
-       }
-      }
-     }
-    }
-   }
-  }
- }
- {
-  CommentEntity {
-   coords 0 1 0
-   m_Comment "CampaignFactionManager: "\
-   "Make sure one faction is non-playable to use for Independent units."
-   m_Color 0 0 0
-   m_FaceCamera 1
-   m_TextBackground 1
-   m_BackgroundColor 1 0.6 0
-   m_BackgroundTransparency 0
+  SCR_Faction "{60DCF47AEF40BD72}" : "{078966960951BF1E}Configs/Factions/MEC.conf" {
   }
  }
 }

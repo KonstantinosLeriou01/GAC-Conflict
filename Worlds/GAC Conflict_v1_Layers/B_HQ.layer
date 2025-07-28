@@ -24,7 +24,7 @@ $grp GenericEntity : "{1391CE8C0E255636}Prefabs/Systems/MilitaryBase/ConflictMil
     m_bIsSource 1
    }
    SCR_FactionAffiliationComponent "{5AFC974A2595F05D}" {
-    "faction affiliation" "USSR"
+    "faction affiliation" "US"
    }
    SCR_MilitaryBaseAreaMeshComponent "{5AFC9B0FB2E4AF40}" {
     m_eShape RECTANGLE
@@ -77,7 +77,7 @@ $grp GenericEntity : "{1391CE8C0E255636}Prefabs/Systems/MilitaryBase/ConflictMil
     m_bIsSource 1
    }
    SCR_FactionAffiliationComponent "{5AFC974A2595F05D}" {
-    "faction affiliation" "US"
+    "faction affiliation" "USSR"
    }
    SCR_MilitaryBaseAreaMeshComponent "{5AFC9B0FB2E4AF40}" {
     m_eShape RECTANGLE

@@ -1,0 +1,17 @@
+MetaFileClass {
+ Name "{855DFBC3B34CCDBB}Prefabs/MP/Campaign/MEI_CampaignFaction.conf"
+ Configurations {
+  CONFResourceClass PC {
+  }
+  CONFResourceClass XBOX_ONE : PC {
+  }
+  CONFResourceClass XBOX_SERIES : PC {
+  }
+  CONFResourceClass PS4 : PC {
+  }
+  CONFResourceClass PS5 : PC {
+  }
+  CONFResourceClass HEADLESS : PC {
+  }
+ }
+}

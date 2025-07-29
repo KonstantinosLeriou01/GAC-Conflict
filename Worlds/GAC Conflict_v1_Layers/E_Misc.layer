@@ -498,6 +498,10 @@ GenericEntity : "{32DE30B02A04B844}Prefabs/Compositions/Misc/SubCompositions/For
   }
  }
 }
+SCR_DestructibleEntity : "{34EBB1E5A6A82655}Prefabs/Structures/Walls/Net/NetFence_04/NetFence_04_D.et" {
+ coords 522.725 0.004 3289.859
+ angleY 66.008
+}
 $grp GenericEntity : "{35F2A674E602198F}Prefabs/Props/Military/Sandbags/Sandbag_01_end_high_plastic.et" {
  {
   components {
@@ -599,6 +603,16 @@ $grp SCR_DestructibleBuildingEntity : "{3EE37435FD16C49E}Prefabs/Structures/Buld
  {
   coords 1722.335 241.497 2853.721
   angleY -76.462
+ }
+}
+$grp GenericEntity : "{44FD6B68E3E9F83F}Prefabs/Structures/Signs/Military/SignRectangle_01_140x100/Sign_BaseEntrance_USSR_01.et" {
+ {
+  coords 347.375 82.439 3523.564
+  angleY 132
+ }
+ {
+  coords 460.981 48.097 3274.907
+  angleY 80
  }
 }
 GenericEntity : "{4575A2ADDC292742}Prefabs/Props/Military/Sandbags/Dst/Sandbag_01_single_dst_04_burlap.et" {
@@ -741,6 +755,16 @@ $grp GenericEntity : "{7AF4B627D5C90235}Prefabs/Props/Military/Sandbags/Sandbag_
   coords 3703.433 279.566 446.914
   angleY -25.386
   scale 1.07
+ }
+}
+$grp SCR_DestructibleEntity : "{7B2651CB6E8F1306}Prefabs/Structures/Walls/Net/NetFence_04/NetFence_04_4m_D.et" {
+ {
+  coords 587.138 0.365 3163.443
+  angleY 69.545
+ }
+ {
+  coords 588.448 0.001 3159.617
+  angleY 68.16
  }
 }
 $grp SCR_DestructibleEntity : "{7B75DBCC0EDB5EE3}Prefabs/Structures/Walls/Net/NetFence_03/NetFence_03_8m.et" {
@@ -2293,10 +2317,6 @@ $grp SCR_DestructibleEntity : "{7B75DBCC0EDB5EE3}Prefabs/Structures/Walls/Net/Ne
   angleY 67.824
  }
  {
-  coords 587.1 -30.466 3163.31
-  angleY 67.824
- }
- {
   coords 566.527 -23.862 3206.512
   angleY 50.694
  }
@@ -2330,10 +2350,6 @@ $grp SCR_DestructibleEntity : "{7B75DBCC0EDB5EE3}Prefabs/Structures/Walls/Net/Ne
  }
  {
   coords 520.511 3.326 3297.579
-  angleY 73.878
- }
- {
-  coords 522.731 3.999 3289.891
   angleY 73.878
  }
  {
@@ -3062,6 +3078,67 @@ $grp StaticModelEntity : "{93E06E731212BD96}Prefabs/Structures/Walls/BarbedWire/
   angleY 39.366
  }
 }
+GenericEntity : "{9483333BFD9E2D0F}Prefabs/Compositions/Slotted/SlotRoadSmall/Checkpoint_S_USSR_01.et" {
+ coords 524.694 42.361 3286.136
+ angleY 75.847
+ {
+  GenericEntity {
+   ID "5CC6B48B9C8C2BA0"
+   coords -2.685 -0.099 1.554
+   angleY -165.47
+  }
+  GenericEntity {
+   ID "5CC6B48B9C8C2BF4"
+   coords -2.265 -0.221 3.441
+   angleY 5.604
+  }
+  GenericEntity {
+   ID "5CC6B48B9C8C2B94"
+   coords -1.413 -0.016 1.045
+   angleY -129.705
+   {
+    DecalEntity {
+     ID "56E0B29F4975B6A9"
+     coords 0 0.001 0
+     angleX -90
+     angleY 180
+     angleZ -180
+    }
+   }
+  }
+  GenericEntity {
+   ID "5CC6B48B9C8C2A7C"
+   coords 2.511 0.142 -2.694
+   angleY -96.241
+   angleZ 75
+  }
+  GenericEntity {
+   ID "5CC6B4BF288B3FF4"
+   coords -2.961 -0.034 0.813
+   angleY -104.623
+  }
+  GenericEntity {
+   ID "5E5AD06E26C12FE8"
+   coords 2.773 0.161 -4.695
+   angleY -55.621
+  }
+  StaticModelEntity {
+   ID "5CC6B48B9C8C2BDB"
+   coords -2.941 -0.121 1.88
+   angleY -69.67
+  }
+  StaticModelEntity {
+   ID "5CC6B48B9C8C2A48"
+   coords -2.329 -0.178 2.768
+   angleY 42.427
+  }
+  StaticModelEntity {
+   ID "5CC6B48B9C8C2B00"
+   coords 2.631 0.167 -3.074
+   angleY 103.572
+  }
+ }
+}
 $grp SCR_DestructibleEntity : "{9AEEFE7F2A93F585}Prefabs/Structures/Walls/Net/NetFence_03/NetFence_03_4m.et" {
  {
   coords 3771.337 -1.481 926.166
@@ -3688,6 +3765,15 @@ $grp GenericEntity : "{9C9C4BED9E19C374}Prefabs/Props/Military/Sandbags/Sandbag_
   angleY -55.116
  }
 }
+StaticModelEntity : "{A46D45922F8CAD6C}Prefabs/Props/Military/Fortification/CzechHedgehog_01_painted.et" {
+ components {
+  Hierarchy "{5CCCBEF0E7D1350C}" {
+   Enabled 1
+  }
+ }
+ coords 516.846 0.001 3287.494
+ angleY -137.428
+}
 GenericEntity : "{A5E64994411BA6A0}Prefabs/Props/Civilian/Pen_01/Pen_01_base.et" {
  coords 1752.962 256.078 2833.258
  angleY -179
@@ -4015,6 +4101,38 @@ $grp GenericEntity : "{C7A49C5B54C86903}Prefabs/Props/Military/Sandbags/Sandbag_
   angleZ -70.31
  }
 }
+$grp GenericEntity : "{C8806310DC354E8B}Prefabs/Props/VehicleParts/Tires/Tire_BTR70.et" {
+ {
+  components {
+   Hierarchy "{5CCCBEF0E7DB2E68}" {
+    Enabled 1
+   }
+  }
+  coords 516.864 42.853 3287.095
+  angleY 22.759
+  angleZ 75
+ }
+ {
+  components {
+   Hierarchy "{5CCCBEF0E7DB2E68}" {
+    Enabled 1
+   }
+  }
+  coords 487.253 45.641 3273.706
+  angleY -25.241
+  angleZ 75
+ }
+ {
+  components {
+   Hierarchy "{5CCCBEF0E7DB2E68}" {
+    Enabled 1
+   }
+  }
+  coords 461.149 48.079 3275.096
+  angleY 22.759
+  angleZ 75
+ }
+}
 $grp GenericEntity : "{C971AFD204F62488}Prefabs/Props/Military/Sandbags/Dst/Sandbag_01_single_dst_03_burlap.et" {
  {
   coords 1746.969 252.986 2857.223
@@ -4172,6 +4290,78 @@ $grp GenericEntity : "{CFFEB23FBEA00322}Prefabs/Props/Military/Sandbags/Sandbag_
  {
   coords 1786.641 244.534 2843.232
   angleY 38.476
+ }
+}
+$grp GenericEntity : "{D0E4F05E07E40B24}Prefabs/Structures/Signs/Military/SignMinefield_01/SignMinefield_01.et" {
+ {
+  coords 526.996 41.856 3282.289
+  angleY 76
+ }
+ {
+  coords 524.665 41.866 3291.05
+  angleY 71
+ }
+ {
+  coords 530.295 48.318 3305.172
+  angleY 130
+ }
+ {
+  coords 523.986 47.155 3298.662
+  angleY 135
+ }
+ {
+  coords 543.159 50.264 3318.099
+  angleY 131
+ }
+ {
+  coords 536.737 49.551 3311.7
+  angleY 136
+ }
+ {
+  coords 570.358 61.232 3344.449
+  angleY 131.85
+ }
+ {
+  coords 557.304 54.567 3331.714
+  angleY 130.85
+ }
+ {
+  coords 550.899 51.394 3325.299
+  angleY 135.85
+ }
+ {
+  coords 563.842 58.048 3338.146
+  angleY 136.85
+ }
+ {
+  coords 595.01 75.17 3372.161
+  angleY 127.732
+ }
+ {
+  coords 582.904 68.848 3358.521
+  angleY 126.732
+ }
+ {
+  coords 576.977 64.914 3351.662
+  angleY 131.732
+ }
+ {
+  coords 588.964 72.626 3365.406
+  angleY 132.732
+ }
+}
+$grp GenericEntity : "{D174C165E264E087}Prefabs/Structures/Signs/Military/SignRectangle_01_140x100/Sign_BaseEntrance_US_01.et" {
+ {
+  coords 390.982 60.905 3349.237
+  angleY 165
+ }
+ {
+  coords 346.593 82.686 3529.046
+  angleY 142
+ }
+ {
+  coords 487.108 45.654 3273.712
+  angleY 75
  }
 }
 SCR_DestructibleBuildingEntity : "{DFA84BF57FE444F5}Prefabs/Structures/Bulding/Military/sandpool_map.et" {

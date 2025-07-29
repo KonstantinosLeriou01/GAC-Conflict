@@ -84,7 +84,7 @@ $grp GenericEntity : "{1391CE8C0E255636}Prefabs/Systems/MilitaryBase/ConflictMil
    }
   }
   coords 275.594 89.696 3632.621
-  angleY -152.774
+  angleY -126.521
   {
    CommentEntity {
     coords 0 1 0
@@ -95,6 +95,16 @@ $grp GenericEntity : "{1391CE8C0E255636}Prefabs/Systems/MilitaryBase/ConflictMil
     m_TextBackground 1
     m_BackgroundColor 1 0.6 0
     m_BackgroundTransparency 0
+   }
+   GenericEntity {
+    ID "5CCED514A5908822"
+    coords -32.58 0.717 29.541
+    angleY -176.241
+   }
+   GenericEntity {
+    ID "606078EE23DE48AC"
+    coords -32.712 0.031 27.545
+    angleY -176.241
    }
   }
  }

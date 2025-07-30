@@ -1,0 +1,21 @@
+Vehicle : "{2B2364D74EFA7D4E}Prefabs/Vehicles/Helicopters/AH64D/AH64D_AGM65_X4.et" {
+ ID "57DA6675519A417B"
+ components {
+  SCR_EditableVehicleComponent "{50DEB7C26B5EB312}" {
+   m_UIInfo SCR_EditableEntityUIInfo "{5298E609432D192D}" {
+    m_EntityBudgetCost {
+     SCR_EntityBudgetValue "{5EDC86E4AF8908B6}" {
+      m_Value 2500
+     }
+     SCR_EntityBudgetValue "{632E50D1CB7787D2}" {
+      m_BudgetType RANK_COLONEL
+      m_Value 7
+     }
+     SCR_EntityBudgetValue "{64DB2E300A185EE7}" {
+      m_Value 300
+     }
+    }
+   }
+  }
+ }
+}

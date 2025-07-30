@@ -1,3 +1,97 @@
 GenericEntity : "{6E9190BC2713551D}Prefabs/Compositions/Slotted/BuildableComposition_Base.et" {
  ID "5282DCB5DFC8538F"
+ {
+  GameEntity {
+   ID "5D0CC9D2A9422BD7"
+   coords 9.572 0 -8.361
+  }
+  GenericEntity {
+   ID "5D0CC9D2A9422B8C"
+   coords 9.723 0 -8.2
+  }
+  GenericEntity {
+   ID "5D0CC9D2A9422D0A"
+   coords 8.341 0 -10.197
+  }
+  GenericEntity {
+   ID "5D0CC9D2A9422D12"
+   coords 8.77 0 -9.99
+  }
+  GenericEntity {
+   ID "5D0CC9D2A9422D1F"
+   coords 8.24 0 -9.947
+  }
+  GenericEntity {
+   ID "5D0CC9D2A9422D24"
+   coords 10.245 0 -6.803
+   {
+    DecalEntity {
+     ID "56E0B29F4975B6A9"
+     coords 0 0 0
+    }
+   }
+  }
+  GenericEntity {
+   ID "5D0CC9D2A9422D36"
+   coords 8.673 0 -9.342
+   {
+    DecalEntity {
+     ID "56E0B29F4975B6A9"
+     coords 0 0 0
+    }
+   }
+  }
+  GenericEntity {
+   ID "5D0CC9D2A9422D4B"
+   coords 9.928 0.029 -9.758
+  }
+  GenericEntity {
+   ID "5D0CC9D2A9422D59"
+   coords 8.932 0.029 -6.491
+  }
+  GenericEntity {
+   ID "5D0CC9D2A9422DC9"
+   coords 11.331 0.021 -8.648
+  }
+  GenericEntity {
+   ID "5D0CC9D2A9422DDD"
+   coords 7.776 0 -8.736
+  }
+  GenericEntity {
+   ID "5D0CC9D2A9422DE7"
+   coords 10.431 0 -6.214
+  }
+  GenericEntity {
+   ID "5D0CC9D2A9422DFA"
+   coords 10.422 0.021 -6.452
+  }
+  GenericEntity {
+   ID "5D1EB45E30138995"
+   coords 9.774 0.001 -10.189
+  }
+  GenericEntity {
+   ID "5D1EB45E30138A35"
+   coords 11.83 0.001 -7.529
+  }
+  GenericEntity {
+   ID "5E5CB309775C55FC"
+   coords 8.299 0.001 -6.662
+  }
+  StaticModelEntity {
+   ID "5D0CC9D2A9422A92"
+   coords 8.28 0 -9.823
+  }
+  StaticModelEntity {
+   ID "5D0CC9D2A9422D61"
+   coords 10.002 0 -6.079
+  }
+  StaticModelEntity {
+   ID "5D0CC9D2A9422D77"
+   coords 11.652 0.189 -7.823
+  }
+  StaticModelEntity {
+   ID "5D0CC9D2A9422DD1"
+   coords 7.612 0 -8.157
+  }
+ }
 }

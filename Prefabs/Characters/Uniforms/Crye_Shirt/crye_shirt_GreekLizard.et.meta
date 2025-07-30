@@ -1,0 +1,17 @@
+MetaFileClass {
+ Name "{2F5C73DF8EAA0512}Prefabs/Characters/Uniforms/Crye_Shirt/crye_shirt_GreekLizard.et"
+ Configurations {
+  EntityTemplateResourceClass PC {
+  }
+  EntityTemplateResourceClass XBOX_ONE : PC {
+  }
+  EntityTemplateResourceClass XBOX_SERIES : PC {
+  }
+  EntityTemplateResourceClass PS4 : PC {
+  }
+  EntityTemplateResourceClass PS5 : PC {
+  }
+  EntityTemplateResourceClass HEADLESS : PC {
+  }
+ }
+}

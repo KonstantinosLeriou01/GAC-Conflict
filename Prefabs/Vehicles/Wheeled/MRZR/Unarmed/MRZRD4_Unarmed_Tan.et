@@ -1,3 +1,19 @@
 Vehicle : "{DA7CF11F1BD23125}Prefabs/Vehicles/Wheeled/MRZR/Unarmed/MRZRD4_Unarmed.et" {
  ID "44EC665ABD2FF04B"
+ components {
+  SCR_EditableVehicleComponent "{50DEB7C26B5EB312}" {
+   m_UIInfo SCR_EditableVehicleUIInfo "{5298E609432D192D}" {
+    m_EntityBudgetCost {
+     SCR_EntityBudgetValue "{5EE71CA1677C234F}" {
+      m_BudgetType WCS_COOLDOWN_DURATION
+      m_Value 200
+     }
+     SCR_EntityBudgetValue "{65FB59E88BB0167B}" {
+      m_BudgetType RANK_SERGEANT
+      m_Value 3
+     }
+    }
+   }
+  }
+ }
 }

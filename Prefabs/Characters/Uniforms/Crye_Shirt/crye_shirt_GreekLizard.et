@@ -1,0 +1,13 @@
+GameEntity : "{B89432A8B5F489E5}Prefabs/Characters/Core/Uniform_Base.et" {
+ ID "5104869D194C6243"
+ components {
+  MeshObject "{5104869D194C6262}" {
+   Materials {
+    MaterialAssignClass "{65FB333FEEACB35F}" {
+     SourceMaterial "rhs_triada_combat_shirt"
+     AssignedMaterial "{E103CD1D2977B32F}Assets/Characters/Uniforms/Crye_Combat_Shirt/Data/Crye_longsleeve_GreekLizard.emat"
+    }
+   }
+  }
+ }
+}

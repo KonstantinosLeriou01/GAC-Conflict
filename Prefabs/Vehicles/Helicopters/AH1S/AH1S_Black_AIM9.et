@@ -1,0 +1,21 @@
+Vehicle : "{4BE0F3AE27C9FC29}Prefabs/Vehicles/Helicopters/AH1S/AH1S_Marines_AIM9.et" {
+ ID "57DA6675519A417B"
+ components {
+  SCR_EditableVehicleComponent "{50DEB7C26B5EB312}" {
+   m_UIInfo SCR_EditableEntityUIInfo "{5298E609432D192D}" {
+    m_EntityBudgetCost {
+     SCR_EntityBudgetValue "{5EDC86E4AF8908B6}" {
+      m_Value 2000
+     }
+     SCR_EntityBudgetValue "{6242ECBBA87B4D8E}" {
+      m_BudgetType RANK_MAJOR
+      m_Value 6
+     }
+     SCR_EntityBudgetValue "{62911B1B6F1C0829}" {
+      m_Value 300
+     }
+    }
+   }
+  }
+ }
+}

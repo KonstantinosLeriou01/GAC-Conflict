@@ -1,0 +1,324 @@
+$grp PolylineShapeEntity {
+ RussianLine {
+  coords 36.025 209.948 2893.994
+  Points {
+   ShapePoint "{65FB130CD7A0C6D6}" {
+    Position 0 -0.001 0
+   }
+   ShapePoint "{65FB130CD7A12855}" {
+    Position 5 1.244 -0.548
+   }
+   ShapePoint "{65FB130CD2235BEA}" {
+    Position 87.624 -91.503 -7.565
+   }
+   ShapePoint "{65FB130CDEECC0F6}" {
+    Position 146.37 -76.67 -72.287
+   }
+   ShapePoint "{65FB130CDB81445C}" {
+    Position 165.942 -26.996 -157.957
+   }
+   ShapePoint "{65FB130CD80FCB54}" {
+    Position 282.768 52.176 -234.909
+   }
+   ShapePoint "{65FB130C228160B1}" {
+    Position 316.502 24.85 -254.422
+   }
+   ShapePoint "{65FB130C204B1296}" {
+    Position 327.167 19.588 -254.552
+   }
+   ShapePoint "{65FB130C2DE18162}" {
+    Position 413.582 -11.843 -249.369
+   }
+   ShapePoint "{65FB130C2C2F2BE3}" {
+    Position 414.49 -30.916 -155.327
+   }
+   ShapePoint "{65FB130C28B98C03}" {
+    Position 403.977 -30.674 -126.418
+   }
+   ShapePoint "{65FB130C37B5CFCC}" {
+    Position 383.928 -18.505 -67.187
+   }
+   ShapePoint "{65FB130C362DEE39}" {
+    Position 372.749 -8.753 -33.199
+   }
+   ShapePoint "{65FB130C348FE8A2}" {
+    Position 429.062 -48.093 30.469
+   }
+   ShapePoint "{65FB130C326CCC80}" {
+    Position 505.913 -95.575 133.245
+   }
+   ShapePoint "{65FB130C30F35C78}" {
+    Position 535.965 -107.818 143.594
+   }
+   ShapePoint "{65FB130C3F14A65C}" {
+    Position 540.312 -111.254 154.012
+   }
+   ShapePoint "{65FB130C3DD70206}" {
+    Position 556.423 -136.71 199.454
+   }
+   ShapePoint "{65FB130C3CEE2B57}" {
+    Position 558.762 -162.835 259.678
+   }
+   ShapePoint "{65FB130C3AD0D51C}" {
+    Position 537.535 -171.395 307.303
+   }
+   ShapePoint "{65FB130C3A56A48C}" {
+    Position 527.261 -178.805 319.47
+   }
+   ShapePoint "{65FB130C3960B20C}" {
+    Position 501.818 -171.041 351.008
+   }
+   ShapePoint "{65FB130C079DC0BD}" {
+    Position 487.957 -163.079 403.021
+   }
+   ShapePoint "{65FB130C086E39EF}" {
+    Position 563.631 -132.915 484.387
+   }
+   ShapePoint "{65FB130C169EE445}" {
+    Position 564.176 -91.102 541.288
+   }
+   ShapePoint "{65FB130C15751A01}" {
+    Position 592.414 -66.016 591.941
+   }
+   ShapePoint "{65FB130C1400DF17}" {
+    Position 608.579 -34.09 648.081
+   }
+   ShapePoint "{65FB130C12A89FFE}" {
+    Position 611.991 0.849 704.525
+   }
+   ShapePoint "{65FB130C113084F1}" {
+    Position 600.563 43.178 754.153
+   }
+   ShapePoint "{65FB130C1FBB753C}" {
+    Position 634.606 48.751 804.074
+   }
+   ShapePoint "{65FB130C1E2FBBFF}" {
+    Position 639.63 82.078 868.108
+   }
+   ShapePoint "{65FB130C1CD44C0A}" {
+    Position 640.266 108.55 934.52
+   }
+   ShapePoint "{65FB130C1B82776C}" {
+    Position 634.975 101.834 1005.579
+   }
+   ShapePoint "{65FB130C1A61DA7A}" {
+    Position 626.704 65.081 1082.474
+   }
+   ShapePoint "{65FB130C194A706D}" {
+    Position 616.616 36.108 1137.839
+   }
+   ShapePoint "{65FB130C183184DD}" {
+    Position 593.197 10.052 1202
+   }
+  }
+  {
+   KF_SafezoneTriggerEntity : "{17B60DA8BC08A5DF}Prefabs/Systems/ConflictSafezone.et" {
+    components {
+     Hierarchy "{65FB130C7CD11B21}" {
+     }
+    }
+    coords 0 0 0
+    TriggerShapeType Polyline
+    DrawShape 0
+    ClassesFilter {
+    }
+    PrefabsFilter {
+     PrefabFilter "{65FB24B2313471F4}" {
+      Prefab "{8D89B17BCFBFAE44}Prefabs/Characters/Campaign/Final/Campaign_US_Player.et"
+     }
+    }
+   }
+  }
+ }
+ AmericanLine {
+  coords 2675.472 465.963 2.824
+  Points {
+   ShapePoint "{65FB130C522A5E8E}" {
+    Position 0 0 0
+   }
+   ShapePoint "{65FB130C522ABFDF}" {
+    Position -0.842 -0.625 7.138
+   }
+   ShapePoint "{65FB130C5F08DE2A}" {
+    Position -3.736 -5.166 21.064
+   }
+   ShapePoint "{65FB130C5E6418B0}" {
+    Position -27.058 -27.837 55.126
+   }
+   ShapePoint "{65FB130C5D44CDAB}" {
+    Position -31.547 -49.86 93.678
+   }
+   ShapePoint "{65FB130C5B7B6192}" {
+    Position -34.193 -68.677 148.805
+   }
+   ShapePoint "{65FB130C5AFD604C}" {
+    Position -37.761 -83.923 179.975
+   }
+   ShapePoint "{65FB130C59D09FAB}" {
+    Position -63.479 -116.669 235.091
+   }
+   ShapePoint "{65FB130C597E011B}" {
+    Position -70.932 -125.135 247.538
+   }
+   ShapePoint "{65FB130C5876B61F}" {
+    Position -75.258 -147.424 289.116
+   }
+   ShapePoint "{65FB130DA76B0C26}" {
+    Position -38.731 -135.877 310.764
+   }
+   ShapePoint "{65FB130DA66058A2}" {
+    Position 8.434 -120.647 318.763
+   }
+   ShapePoint "{65FB130DA5EF811D}" {
+    Position 31.625 -108.089 329.831
+   }
+   ShapePoint "{65FB130DA43285E0}" {
+    Position 39.435 -101.6 342.595
+   }
+   ShapePoint "{65FB130DA35BC3AE}" {
+    Position 45.405 -95.926 369.337
+   }
+   ShapePoint "{65FB130DA1E26499}" {
+    Position 51.08 -95.122 384.645
+   }
+   ShapePoint "{65FB130DA14FF090}" {
+    Position 55.125 -103.43 407.307
+   }
+   ShapePoint "{65FB130DA039FDA7}" {
+    Position 64.167 -112.462 420.541
+   }
+   ShapePoint "{65FB130DAF952460}" {
+    Position 75.149 -126.176 443.916
+   }
+   ShapePoint "{65FB130DAE6F02F9}" {
+    Position 85.545 -131.908 453.839
+   }
+   ShapePoint "{65FB130DADED4EB0}" {
+    Position 101.166 -138.617 475.983
+   }
+   ShapePoint "{65FB130DAC86CD75}" {
+    Position 122.035 -144.391 486.853
+   }
+   ShapePoint "{65FB130DAC0A0822}" {
+    Position 143.636 -144.633 507.617
+   }
+   ShapePoint "{65FB130DAB283EF4}" {
+    Position 157.776 -141.317 529.515
+   }
+   ShapePoint "{65FB130DA84C17B6}" {
+    Position 198.253 -126.883 556.79
+   }
+   ShapePoint "{65FB130DB731595E}" {
+    Position 238.47 -110.658 569.609
+   }
+   ShapePoint "{65FB130DB6CC17CC}" {
+    Position 274.491 -89.225 583.691
+   }
+   ShapePoint "{65FB130DB5A14AEF}" {
+    Position 316.766 -64.434 598.815
+   }
+   ShapePoint "{65FB130DB5523697}" {
+    Position 353.346 -45.576 631.961
+   }
+   ShapePoint "{65FB130DB402CB63}" {
+    Position 374.818 -31.649 678.397
+   }
+   ShapePoint "{65FB130DB39CC16F}" {
+    Position 381.835 -29.184 704.311
+   }
+   ShapePoint "{65FB130DB2892369}" {
+    Position 420.445 -20.303 763.878
+   }
+   ShapePoint "{65FB130DB19A7326}" {
+    Position 445.01 -16.164 770.612
+   }
+   ShapePoint "{65FB130DB0BB2C05}" {
+    Position 457.277 -13.539 806.69
+   }
+   ShapePoint "{65FB130DB0509D1B}" {
+    Position 476.562 -14.813 821.772
+   }
+   ShapePoint "{65FB130DBFFE181C}" {
+    Position 486.874 -14.77 843.303
+   }
+   ShapePoint "{65FB130DBED44E9E}" {
+    Position 530.074 -19.798 857.062
+   }
+   ShapePoint "{65FB130DBDBC0173}" {
+    Position 532.872 -35.869 907.2
+   }
+   ShapePoint "{65FB130DBC949DE0}" {
+    Position 573.092 -47.43 912.009
+   }
+   ShapePoint "{65FB130DBB4E835C}" {
+    Position 613.991 -76.462 973.31
+   }
+   ShapePoint "{65FB130DB9808429}" {
+    Position 670.819 -108.535 1011.785
+   }
+   ShapePoint "{65FB130DB89B181C}" {
+    Position 734.504 -108.273 1012.285
+   }
+   ShapePoint "{65FB130D86B27211}" {
+    Position 880.114 -199.243 888.131
+   }
+   ShapePoint "{65FB130D85AEB076}" {
+    Position 962.559 -220.23 892.996
+   }
+   ShapePoint "{65FB130D85036542}" {
+    Position 1007.45 -228.285 887.134
+   }
+   ShapePoint "{65FB130D8488C636}" {
+    Position 1022.515 -233.978 895.086
+   }
+   ShapePoint "{65FB130D836ABD26}" {
+    Position 1040.202 -236.588 893.639
+   }
+   ShapePoint "{65FB130D826EA9C5}" {
+    Position 1053.461 -235.903 874.585
+   }
+   ShapePoint "{65FB130D815B7851}" {
+    Position 1098.078 -234.133 877.044
+   }
+   ShapePoint "{65FB130D80E69876}" {
+    Position 1099.981 -234.022 883.249
+   }
+   ShapePoint "{65FB130D800D0B3A}" {
+    Position 1167.282 -235.931 899.525
+   }
+   ShapePoint "{65FB130D8EDE51C8}" {
+    Position 1195.353 -228.908 907.881
+   }
+   ShapePoint "{65FB130D8E17CBF6}" {
+    Position 1227.101 -200.431 917.607
+   }
+   ShapePoint "{65FB130D8D14F8DD}" {
+    Position 1276.87 -129.274 932.303
+   }
+   ShapePoint "{65FB130D8B60F169}" {
+    Position 1286.825 -121.555 934.243
+   }
+   ShapePoint "{65FB130D8A67F983}" {
+    Position 1344.326 -110.415 944.584
+   }
+  }
+  {
+   KF_SafezoneTriggerEntity : "{17B60DA8BC08A5DF}Prefabs/Systems/ConflictSafezone.et" {
+    components {
+     Hierarchy "{65FB130D9C1BEADF}" {
+     }
+    }
+    coords 0 0 0
+    TriggerShapeType Polyline
+    DrawShape 0
+    ClassesFilter {
+    }
+    PrefabsFilter {
+     PrefabFilter "{65FB24B294A7DCAA}" {
+      Prefab "{F063CEEB9295E9B6}Prefabs/Characters/Campaign/Final/Campaign_USSR_Player.et"
+     }
+    }
+   }
+  }
+ }
+}

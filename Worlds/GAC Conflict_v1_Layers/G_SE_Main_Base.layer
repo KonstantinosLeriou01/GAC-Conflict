@@ -18,216 +18,74 @@ GenericEntity : "{0AF1C4C9C7EF05F2}Prefabs/Compositions/Slotted/SlotFlatSmall/Fu
   }
  }
 }
-GenericEntity : "{54986385A6AF77B2}Prefabs/Props/Military/Arsenal/ArsenalBoxes/ArsenalBox_Base.et" {
+GenericEntity : "{45C675ED3CFBBEC5}Prefabs/Props/Military/Compositions/US/ArsenalBox_US.et" {
  components {
-  SCR_FactionAffiliationComponent "{5A50E7655452A21D}" {
-   "faction affiliation" "USSR"
-  }
- }
- coords 3729.175 279.968 396.581
- angleY -88.677
-}
-GenericEntity : "{76D4FE49EA6C57F3}Prefabs/Compositions/Slotted/SlotFlatLarge/LivingArea_L_US_01.et" {
- coords 3722.952 280 428.034
- angleY 1.115
- {
-  GameEntity {
-   ID "5D0CC9D2A9422BD7"
-   coords -90.195 -0.039 -52.285
-   angleY 52.336
-  }
-  GenericEntity {
-   ID "5D0CC9D2A9422E19"
-   coords 25.136 -0.092 15.873
-   angleY -179.946
-  }
-  GenericEntity {
-   ID "5D0CC9D2A9422EEF"
-   coords 20.227 -0.841 16.049
-   angleY -176.909
-  }
-  GenericEntity {
-   ID "5D0CC9D2A9422DC9"
-   coords -88.454 -0.054 -53.196
-   angleY -86.451
-   angleZ 90
-  }
-  GenericEntity {
-   ID "5D0CC9D2A9422DFA"
-   coords -86.327 -0.057 -52.136
-   angleY 159.891
-   angleZ 90
-  }
-  GenericEntity {
-   ID "5D0CC9D2A9422D0A"
-   coords -90.209 -0.031 -50.321
-   angleY -13.446
-  }
-  GenericEntity {
-   ID "5D0CC9D2A9422D12"
-   coords -89.971 -0.031 -50.735
-   angleY -13.446
-  }
-  GenericEntity {
-   ID "5D0CC9D2A9422D1F"
-   coords -89.966 -0.031 -50.204
-   angleY -13.446
-  }
-  GenericEntity {
-   ID "5D0CC9D2A9422D4B"
-   coords -89.66 -0.032 -51.873
-   angleY 86
-  }
-  GenericEntity {
-   ID "5D0CC9D2A9422D59"
-   coords -86.47 -0.046 -50.653
-   angleY 21.685
-  }
-  GenericEntity {
-   ID "5D0CC9D2A9422E08"
-   coords 18.868 -0.896 16.14
-   angleY -175.966
-  }
-  GenericEntity {
-   ID "5D0CC9D2A9422E25"
-   coords 23.439 -0.16 15.825
-   angleY 179.709
-  }
-  GenericEntity {
-   ID "5D0CC9D2A9422E35"
-   coords 21.878 -0.666 15.964
-   angleY 2
-  }
-  GenericEntity {
-   ID "5D0CC9D2A9422E5A"
-   coords 26.88 -0.583 15.849
-   angleY 2
-  }
-  GenericEntity {
-   ID "5D0CC9D2A9422EC7"
-   coords 28.559 -0.658 15.784
-   angleY -178
-  }
-  GenericEntity {
-   ID "5D0CC9D2A9422EDA"
-   coords 22.432 -0.2 15.998
-   angleY -178
-  }
-  GenericEntity {
-   ID "5D0CC9D2A9422DDD"
-   coords -88.79 -0.031 -49.656
-   angleY 123.258
-  }
-  GenericEntity {
-   ID "5D0CC9D2A9422DE7"
-   coords -86.089 -0.06 -52.129
-   angleY 123.258
-  }
-  GenericEntity {
-   ID "5D1EB45E301389D4"
-   coords 29.122 0.001 13.822
-   angleY -80.06
-  }
-  GenericEntity {
-   ID "5E3303B1820867AC"
-   coords 19.934 0 7.453
-   angleX 0.994
-   angleY -3.084
-   angleZ 0.799
-  }
-  GenericEntity {
-   ID "5D0CC9D2A94231BE"
-   coords 18.243 0 5.735
-   angleY 90
-  }
-  GenericEntity {
-   ID "5D0CC9D2A9422C1C"
-   coords 4.733 -0.091 18.421
-   angleX -0.968
-   angleY -2.617
-   angleZ 0.697
-  }
-  GenericEntity {
-   ID "5D45393E27E7F1AF"
-   coords 18.538 0 5.572
-   {
-    GenericEntity {
-     ID "5D45393E54132E6E"
-     coords 1.489 0 0.783
-     angleY 2.448
-    }
-    GenericEntity {
-     ID "5D45393E54132E68"
-     coords 1.345 0 -0.542
-     angleY 94.148
-     {
-      GenericEntity {
-       ID "5D3085BCA5EF72EE"
-       coords 0 0 0.001
-      }
+  SCR_ArsenalComponent "{56F2C6D1431AD9AF}" {
+   m_OverwriteArsenalConfig SCR_ArsenalItemListConfig "{65FC85B8599DC8B0}" {
+    m_aArsenalItems {
+     SCR_ArsenalItemStandalone "{65FC85B98CC73436}" {
+      m_eItemType BACKPACK
+      m_ItemResourceName "{4977C9711C8F1943}Prefabs/Items/Equipment/Backpacks/JammerBag.et"
      }
-    }
-    GenericEntity {
-     ID "5D45393E54132E65"
-     coords -1.508 0 -1.117
-     angleY 0.603
-    }
-    GenericEntity {
-     ID "5D45393E54132E60"
-     coords -1.574 0 -0.003
-     angleY -178.804
-    }
-    GenericEntity {
-     ID "5D45393E54132E62"
-     coords -1.614 0 1.102
+     SCR_ArsenalItemStandalone "{65FC85B99C7655B0}" {
+      m_ItemResourceName "{E2434ED1318D8476}Prefabs/Characters/Items/DroneController.et"
+     }
+     SCR_ArsenalItemStandalone "{65FC85B9F005A831}" {
+      m_eItemType HEADWEAR
+      m_ItemResourceName "{8951045BFE8BC8E4}Prefabs/Characters/HeadGear/FPV_Goggles.et"
+     }
+     SCR_ArsenalItemStandalone "{65FC85BABB6597C3}" {
+      m_eItemType EQUIPMENT
+      m_ItemResourceName "{1602B2595AC224FB}Prefabs/Drones/FPVBase/FPVBattery.et"
+     }
     }
    }
   }
-  GenericEntity {
-   ID "5D0A8E5C8B14AE51"
-   coords -19.357 -0.076 -0.572
-   angleY -90
+  ActionsManagerComponent "{56F2C6D1431ADB12}" {
+   additionalActions {
+    Bacon_GunBuilderOpenAction "{606B12191E111053}" {
+     ParentContextList {
+     }
+    }
+   }
   }
-  GenericEntity {
-   ID "5D0CC9D2A9422DBF"
-   coords 18.441 0 5.791
-   angleY -14.893
+ }
+ coords 3711.897 280.098 423.469
+ angleY -90.743
+}
+$grp GenericEntity : "{77F90F896D5145C8}Prefabs/Compositions/Slotted/SlotFlatSmall/LivingArea_S_US_01.et" {
+ {
+  coords 3713.038 280 439.887
+  angleY 179.038
+  {
+   GenericEntity {
+    ID "5D22B92C55FB6E83"
+    components {
+     SCR_CampaignBuildingProviderComponent "{5ED7185081A6289C}" {
+      Enabled 0
+     }
+    }
+   }
   }
-  GenericEntity {
-   ID "5D0A8E5C8B14AE41"
-   coords -15.591 0.107 -10.577
-   angleY -50.058
-  }
-  StaticModelEntity {
-   ID "5D0CC9D2A9422F60"
-   coords 27.456 0.048 16.557
-   angleY 95.776
-  }
-  StaticModelEntity {
-   ID "5D0CC9D2A9422C87"
-   coords 24.572 0.235 16.704
-   angleY 92
-  }
-  StaticModelEntity {
-   ID "5D0CC9D2A9422C91"
-   coords 21.304 0.056 16.818
-   angleY 92
-  }
-  StaticModelEntity {
-   ID "5D0CC9D2A9422CA0"
-   coords 13.488 0 3.665
-   angleY 2.248
-  }
-  StaticModelEntity {
-   ID "5D0CC9D2A9422CD1"
-   coords 8.703 0 3.908
-   angleY 2.248
+ }
+ {
+  coords 3736.512 280 440.591
+  angleY -167.202
+  {
+   GenericEntity {
+    ID "5D22B92C55FB6E83"
+    components {
+     SCR_CampaignBuildingProviderComponent "{5ED7185081A6289C}" {
+      Enabled 0
+     }
+    }
+   }
   }
  }
 }
 GenericEntity : "{7C367E9261376345}Prefabs/Compositions/Slotted/SlotFlatSmall/AmmoStorage_S_US_01.et" {
- coords 3713.729 280 419.53
- angleY -179
+ coords 3710.394 280 423.303
+ angleY 90.868
 }
 GenericEntity : "{8B4B8BF44162B24E}Prefabs/Compositions/Slotted/SlotFlatSmall/Antenna_S_US_01.et" {
  coords 3750.028 280 400.593
@@ -325,6 +183,9 @@ GenericEntity : "{A13F6A7F82DF031B}Prefabs/Compositions/Slotted/SlotFlatLarge/He
      angleZ 90
     }
    }
+  }
+  GenericEntity {
+   ID "5E64C0FB916EAF90"
   }
  }
 }

@@ -1,3 +1,8 @@
+SCR_MapEntity MapEntity_Kunar1 : "{02367029C55BAE5E}Prefabs/World/Game/Kunar/MapEntity_Kunar.et" {
+ coords 3704.624 280 410.691
+ "Map Geometry Data" "{E25E842F90019134}Worlds/Kunar/GameMaster_Kunar.topo"
+ "Satellite background image" "{4488DE6C0E451BE8}Assets/kunarFinal.edds"
+}
 SCR_AIWorld SCR_AIWorld : "{E0A05C76552E7F58}Prefabs/AI/SCR_AIWorld.et" {
  components {
   NavmeshWorldComponent "{5584F30E67F617AD}" {
@@ -236,11 +241,13 @@ SCR_GameModeCampaign GameMode_Campaign : "{3B230AAC5252108F}Prefabs/MP/Modes/Con
   }
  }
  coords 1843.281 233.951 1495.201
+ m_iSafezoneTimer 10
+ m_KillType BIG_EXPLOSIVE
  m_iControlPointsThreshold 4
  m_fVictoryTimer 900
  m_iSuppliesReplenishThreshold 0
  m_iSuppliesArrivalInterval 10
- m_iRegularSuppliesIncome 150
+ m_iRegularSuppliesIncome 100
  m_iRegularSuppliesIncomeExtra 0
  m_iHQStartingSupplies 3000
  m_sINDFORFactionKey "MEI"
@@ -1174,6 +1181,21 @@ SCR_CampaignFactionManager CampaignFactionManager : "{F1AC26310BAE3788}Prefabs/M
     SCR_EntityCatalog "{5C68A0E9A51460AB}" : "{DDF17C8C140BD1F2}Configs/EntityCatalog/USSR/WeaponTripod_EntityCatalog_USSR.conf" {
     }
     SCR_EntityCatalogMultiList "{5C68A0E9AFE1E631}" : "{AC11437A0841F0C1}Configs/EntityCatalog/USSR/WCS_InventoryItems_EntityCatalog_USSR.conf" {
+     m_aMultiLists {
+      SCR_EntityCatalogMultiListEntry "{64485E227881FC81}" {
+       m_aEntities {
+        SCR_EntityCatalogInventoryItem "{62FCF02B16E8E212}" {
+         m_aEntityDataList {
+          SCR_ArsenalItem "{5C62F7D86D938060}" {
+           m_eRequiredRank PRIVATE
+          }
+         }
+        }
+       }
+      }
+      SCR_EntityCatalogMultiListEntry "{64485E232553D7AE}" : "{DDFC75037533AFB5}Configs/EntityCatalog/Patches_v1.conf" {
+      }
+     }
     }
     SCR_EntityCatalog "{5C9EDDD378BA3298}" : "{B4CA6761AC935808}Configs/EntityCatalog/USSR/SupplyContainerItems_EntityCatalog_USSR.conf" {
     }
@@ -1183,6 +1205,8 @@ SCR_CampaignFactionManager CampaignFactionManager : "{F1AC26310BAE3788}Prefabs/M
   }
   SCR_CampaignFaction "{50B30C3ADB052C80}" : "{ADFDBDA163950168}Configs/Factions/US_Campaign.conf" {
    m_aEntityCatalogs {
+    SCR_EntityCatalogMultiList "{5C68A0EE815FA292}" : "{B56E8B4D4B195559}Configs/EntityCatalog/US/Characters_EntityCatalog_US.conf" {
+    }
     SCR_EntityCatalogMultiList "{5C9E82F29B327997}" : "{34B55AA789B622B5}Configs/EntityCatalog/USSR/Vehicles_EntityCatalog_US.conf" {
      m_aMultiLists {
       SCR_EntityCatalogMultiListEntry "{60569780DE4EE17A}" {
@@ -1465,9 +1489,27 @@ SCR_CampaignFactionManager CampaignFactionManager : "{F1AC26310BAE3788}Prefabs/M
           }
          }
         }
+        SCR_EntityCatalogEntry "{65FB24B1AEC32696}" {
+         m_sEntityPrefab "{77CA4803A4A2B8E3}Prefabs/Drones/FPVBase/FPVRPG.et"
+         m_aEntityDataList {
+          SCR_EntityCatalogEditorData "{65FB24B1887B3C79}" {
+           m_eValidEditorModes 33
+          }
+          SCR_EntityCatalogSpawnerData "{65FB24B1931A592F}" {
+          }
+         }
+        }
        }
       }
      }
+    }
+    SCR_EntityCatalogMultiList "{5C68A0EE8B97CA50}" : "{4E70E7C4C2C17D4A}Configs/EntityCatalog/US/Groups_EntityCatalog_US.conf" {
+    }
+    SCR_EntityCatalog "{5C68A0EEB7DB3E84}" : "{0E4B62F186F97C43}Configs/EntityCatalog/US/WeaponTripod_EntityCatalog_US.conf" {
+    }
+    SCR_EntityCatalogMultiList "{5C68A0EEB3F124F9}" : "{38B652747BC64333}Configs/EntityCatalog/US/WCS_InventoryItems_EntityCatalog_US.conf" {
+    }
+    SCR_EntityCatalog "{5C9EDDD37394AD40}" : "{0BF36EFF9FFAF92B}Configs/EntityCatalog/US/SupplyContainerItems_EntityCatalog_US.conf" {
     }
    }
    m_sFactionBackground "{F8AC305446D5D480}UI/Textures/DeployMenu/Loadout-BG/Loadout_US_BG.imageset"

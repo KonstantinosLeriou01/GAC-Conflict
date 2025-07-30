@@ -1,0 +1,14 @@
+Vehicle : "{45DDFA40E1CB6B82}Prefabs/Vehicles/Wheeled/Stryker/M1296/Stryker_Dragoon.et" {
+ ID "BBCBA43A9778AE21"
+ components {
+  SCR_EditableVehicleComponent "{50DEB7C26B5EB312}" {
+   m_UIInfo SCR_EditableVehicleUIInfo "{5298E609432D192D}" {
+    m_EntityBudgetCost {
+     SCR_EntityBudgetValue "{60DC0D1B4DFD4443}" {
+      m_Value 5
+     }
+    }
+   }
+  }
+ }
+}

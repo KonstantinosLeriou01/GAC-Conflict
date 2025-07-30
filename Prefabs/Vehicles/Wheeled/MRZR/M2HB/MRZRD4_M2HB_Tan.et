@@ -1,0 +1,19 @@
+Vehicle : "{497CF28714CD35CB}Prefabs/Vehicles/Wheeled/MRZR/M2HB/MRZRD4_M2HB.et" {
+ ID "44EC665ABD2FF04B"
+ components {
+  SCR_EditableVehicleComponent "{50DEB7C26B5EB312}" {
+   m_UIInfo SCR_EditableVehicleUIInfo "{5298E609432D192D}" {
+    m_EntityBudgetCost {
+     SCR_EntityBudgetValue "{5EE71CA1677C234F}" {
+      m_BudgetType WCS_COOLDOWN_DURATION
+      m_Value 20
+     }
+     SCR_EntityBudgetValue "{6528141C3EA3638B}" {
+      m_BudgetType RANK_LIEUTENANT
+      m_Value 4
+     }
+    }
+   }
+  }
+ }
+}

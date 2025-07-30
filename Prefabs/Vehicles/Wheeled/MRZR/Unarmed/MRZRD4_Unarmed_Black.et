@@ -7,6 +7,12 @@ Vehicle : "{DA7CF11F1BD23125}Prefabs/Vehicles/Wheeled/MRZR/Unarmed/MRZRD4_Unarme
     m_aAutoLabels {
      10 122 50
     }
+    m_EntityBudgetCost {
+     SCR_EntityBudgetValue "{65FB64D025CCCDBD}" {
+      m_BudgetType RANK_SERGEANT
+      m_Value 3
+     }
+    }
    }
   }
   SCR_VehicleFactionAffiliationComponent "{5882CBD9AC741CEC}" {

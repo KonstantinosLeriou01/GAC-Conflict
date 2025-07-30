@@ -8,8 +8,8 @@ Vehicle : "{CBD8C2393BE87581}Prefabs/Vehicles/Core/Helicopter_Base.et" {
       m_Value 2000
      }
      SCR_EntityBudgetValue "{65F9119D59E0100A}" {
-      m_BudgetType RANK_MAJOR
-      m_Value 1
+      m_BudgetType RANK_COLONEL
+      m_Value 7
      }
      SCR_EntityBudgetValue "{65F9119CBCD80AF7}" {
       m_BudgetType WCS_XP_COST

@@ -1,0 +1,6 @@
+SCR_MapEntity : "{731564B66F91B107}Prefabs/World/Game/MapEntity.et" {
+ ID "5255036BAB847859"
+ coords 308.495 94.188 3648.694
+ "Map Geometry Data" "{E25E842F90019134}Worlds/Kunar/GameMaster_Kunar.topo"
+ "Satellite background image" "{4488DE6C0E451BE8}Assets/kunarFinal.edds"
+}

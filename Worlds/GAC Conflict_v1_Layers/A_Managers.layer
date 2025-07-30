@@ -835,6 +835,50 @@ SCR_CampaignFactionManager CampaignFactionManager : "{F1AC26310BAE3788}Prefabs/M
           }
          }
         }
+        SCR_EntityCatalogEntry "{65FCBABE5CCC18D2}" {
+         m_sEntityPrefab "{31E08EF5E9981281}Prefabs/Drones/FPVBase/FPVBase_USSR.et"
+         m_aEntityDataList {
+          SCR_EntityCatalogEditorData "{65F8FE643B4C3CDE}" {
+           m_eValidEditorModes 33
+          }
+          SCR_EntityCatalogSpawnerData "{65F8FE643B4C3CCF}" {
+           m_eSlotTypes VEHICLE_LARGE
+          }
+         }
+        }
+        SCR_EntityCatalogEntry "{65FCBABE0F2BC61F}" {
+         m_sEntityPrefab "{77CA4803A4A2B8E3}Prefabs/Drones/FPVBase/FPVRPG.et"
+         m_aEntityDataList {
+          SCR_EntityCatalogEditorData "{65F8FE643B4C3CDE}" {
+           m_eValidEditorModes 33
+          }
+          SCR_EntityCatalogSpawnerData "{65F8FE643B4C3CCF}" {
+           m_eSlotTypes VEHICLE_LARGE
+          }
+         }
+        }
+        SCR_EntityCatalogEntry "{65FCBABE1916F5FB}" {
+         m_sEntityPrefab "{FDA92D590B9C633B}Prefabs/Drones/DJIBase/DJIBase.et"
+         m_aEntityDataList {
+          SCR_EntityCatalogEditorData "{65F8FE643B4C3CDE}" {
+           m_eValidEditorModes 33
+          }
+          SCR_EntityCatalogSpawnerData "{65F8FE643B4C3CCF}" {
+           m_eSlotTypes VEHICLE_LARGE
+          }
+         }
+        }
+        SCR_EntityCatalogEntry "{65FCBABEEABB04BB}" {
+         m_sEntityPrefab "{55C5BEE65087F7CD}Prefabs/Drones/DJIBase/DJIRGD5Dropper.et"
+         m_aEntityDataList {
+          SCR_EntityCatalogEditorData "{65F8FE643B4C3CDE}" {
+           m_eValidEditorModes 33
+          }
+          SCR_EntityCatalogSpawnerData "{65F8FE643B4C3CCF}" {
+           m_eSlotTypes VEHICLE_LARGE
+          }
+         }
+        }
        }
       }
       SCR_EntityCatalogMultiListEntry "{6332842BAADDFF9B}" {
@@ -1187,7 +1231,7 @@ SCR_CampaignFactionManager CampaignFactionManager : "{F1AC26310BAE3788}Prefabs/M
         SCR_EntityCatalogInventoryItem "{62FCF02B16E8E212}" {
          m_aEntityDataList {
           SCR_ArsenalItem "{5C62F7D86D938060}" {
-           m_eRequiredRank PRIVATE
+           m_eRequiredRank CORPORAL
           }
          }
         }
@@ -1508,6 +1552,19 @@ SCR_CampaignFactionManager CampaignFactionManager : "{F1AC26310BAE3788}Prefabs/M
     SCR_EntityCatalog "{5C68A0EEB7DB3E84}" : "{0E4B62F186F97C43}Configs/EntityCatalog/US/WeaponTripod_EntityCatalog_US.conf" {
     }
     SCR_EntityCatalogMultiList "{5C68A0EEB3F124F9}" : "{38B652747BC64333}Configs/EntityCatalog/US/WCS_InventoryItems_EntityCatalog_US.conf" {
+     m_aMultiLists {
+      SCR_EntityCatalogMultiListEntry "{619028951D30FAC5}" {
+       m_aEntities {
+        SCR_EntityCatalogInventoryItem "{62FCF02B3E9F99B8}" {
+         m_aEntityDataList {
+          SCR_ArsenalItem "{5C62F7D86D938060}" {
+           m_eRequiredRank CORPORAL
+          }
+         }
+        }
+       }
+      }
+     }
     }
     SCR_EntityCatalog "{5C9EDDD37394AD40}" : "{0BF36EFF9FFAF92B}Configs/EntityCatalog/US/SupplyContainerItems_EntityCatalog_US.conf" {
     }

@@ -1,0 +1,27 @@
+GenericEntity {
+ ID "65932E3D2F6C309A"
+ components {
+  SCR_EditableVehicleComponent "{65AF169A26951569}" {
+   m_UIInfo SCR_EditableEntityUIInfo "{65AF169A49E83200}" {
+    m_EntityBudgetCost {
+     SCR_EntityBudgetValue "{6052A79ADDA6C7A8}" {
+      m_BudgetType VEHICLES
+      m_Value 1
+     }
+     SCR_EntityBudgetValue "{5EDC86E4AF8908B6}" {
+      m_BudgetType CAMPAIGN
+      m_Value 200
+     }
+     SCR_EntityBudgetValue "{5EE71CA1677C234F}" {
+      m_BudgetType WCS_COOLDOWN_DURATION
+      m_Value 100
+     }
+     SCR_EntityBudgetValue "{5EF07CE9B4A73374}" {
+      m_BudgetType RANK_CORPORAL
+      m_Value 2
+     }
+    }
+   }
+  }
+ }
+}

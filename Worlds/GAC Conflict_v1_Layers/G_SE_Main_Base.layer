@@ -38,6 +38,10 @@ GenericEntity : "{45C675ED3CFBBEC5}Prefabs/Props/Military/Compositions/US/Arsena
       m_eItemType EQUIPMENT
       m_ItemResourceName "{1602B2595AC224FB}Prefabs/Drones/FPVBase/FPVBattery.et"
      }
+     SCR_ArsenalItemStandalone "{65FCBABFF94005D5}" {
+      m_eItemType EQUIPMENT
+      m_ItemResourceName "{EF1E4AA6DCD2D982}Prefabs/Drones/DJIBase/DJIBattery.et"
+     }
     }
    }
   }
